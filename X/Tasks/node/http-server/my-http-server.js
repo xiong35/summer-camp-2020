@@ -6,14 +6,14 @@ var fs = require("fs");
 var path = require("path");
 
 var { getFmtTime } = require("./get-fmt-time");
-var { autoIndex } = require("./autoIndex/autoindex");
+var { autoIndex } = require("./autoIndex");
 
 var argControlInds = [];
 var args = process.argv.slice(2);
 var config = {
   port: "8080",
   addr: "0.0.0.0",
-  autoIndex: false,
+  autoIndex: true,
 };
 
 args.forEach((val, ind) => {
@@ -33,7 +33,7 @@ argControlInds.forEach((ind) => {
         config.addr = args[ind + 1];
         return;
       case "-i":
-        config.autoIndex = true;
+        config.autoIndex = false;
     }
   } catch {}
   console.error("unkown command:", args[ind]);
@@ -47,18 +47,49 @@ var server = http.createServer(function (req, res) {
   let targetPath = path.join("./", urlPath);
   let absPath = path.resolve(targetPath);
 
-  // if(urlPath)
-  autoIndex(absPath);
-
-  fs.readFile(targetPath, (err, file) => {
-    if (err) {
+  fs.stat(absPath, (err, stats) => {
+    if (err || !stats) {
       console.log("file at:", absPath, "is not found");
       res.writeHead(404);
       res.end("not found");
       return;
+    } else if (stats.isDirectory && stats.isDirectory()) {
+      let tryFiles = ["index.html", "index.htm"].map((it) =>
+        path.join(targetPath, it)
+      );
+      let found = false;
+
+      tryFiles.forEach((path) => {
+        if (found) {
+          return;
+        }
+        try {
+          data = fs.readFileSync(path);
+          if (data) {
+            found = true;
+            res.writeHead(200);
+            res.end(data);
+          }
+        } catch (err) {}
+      });
+
+      if (found) {
+        return;
+      }
+      if (config.autoIndex) {
+        res.writeHead(200);
+        res.end(autoIndex(targetPath));
+      }
+
+      console.log("file at:", absPath, "is not found");
+      res.writeHead(404);
+      res.end("not found");
+    } else if (stats.isFile && stats.isFile()) {
+      fs.readFile(targetPath, (err, file) => {
+        res.writeHead(200);
+        res.end(file);
+      });
     }
-    res.writeHead(200);
-    res.end(file);
   });
 });
 

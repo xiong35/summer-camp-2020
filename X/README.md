@@ -27,4 +27,8 @@
 主要任务: 模拟http-server
 
 - 09:00-11:00 编写http-server
+- 11:00-12:00 学习promise
 - 14:00-15:15 完成 http-server
+- 15:15-17:00 学习webpack
+- 17:00-17:50 学习promise
+- 

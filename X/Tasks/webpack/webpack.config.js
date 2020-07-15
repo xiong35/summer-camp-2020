@@ -19,10 +19,12 @@ module.exports = {
       },
       {
         test: /\.jsx?$/,
-        loaders: [
-          "react-hot-loader/webpack",
-          "babel-loader",
-        ],
+        loaders: ["react-hot-loader/webpack", "babel-loader"],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.js$/,
+        use: ["./loader/log.js"],
         exclude: /node_modules/,
       },
     ],

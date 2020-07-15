@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 
-var http = require("http");
-var url = require("url");
-var fs = require("fs");
-var path = require("path");
+const http = require("http");
+const url = require("url");
+const fs = require("fs");
+const path = require("path");
 
-var { getFmtTime } = require("./get-fmt-time");
-var { autoIndex } = require("./autoIndex");
+const { getFmtTime } = require("./get-fmt-time");
+const { autoIndex } = require("./autoIndex");
+const { help } = require("./help");
 
-var argControlInds = [];
-var args = process.argv.slice(2);
-var config = {
+const argControlInds = [];
+const args = process.argv.slice(2);
+const config = {
   port: "8080",
   addr: "0.0.0.0",
   autoIndex: true,
@@ -34,6 +35,10 @@ argControlInds.forEach((ind) => {
         return;
       case "-i":
         config.autoIndex = false;
+        return;
+      case "-h":
+        console.log(help);
+        process.exit(0);
     }
   } catch {}
   console.error("unkown command:", args[ind]);

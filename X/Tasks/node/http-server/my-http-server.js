@@ -21,18 +21,19 @@ args.forEach((val, ind) => {
 });
 
 argControlInds.forEach((ind) => {
-  switch (args[ind]) {
-    case "-p":
-    case "--port":
-      config.port = args[ind + 1];
-      break;
-    case "-a":
-      config.addr = args[ind + 1];
-      break;
-    default:
-      console.error("unkown command:", args[ind]);
-      process.exit(-1);
-  }
+  try {
+    switch (args[ind]) {
+      case "-p":
+      case "--port":
+        config.port = args[ind + 1];
+        return;
+      case "-a":
+        config.addr = args[ind + 1];
+        return;
+    }
+  } catch {}
+  console.error("unkown command:", args[ind]);
+  process.exit(-1);
 });
 
 http.createServer(function (req, res) {
@@ -59,10 +60,8 @@ http.createServer(function (req, res) {
 try {
   http.listen(config.port, config.addr);
 } catch (err) {
-  console.log("port or address conflict");
+  console.log("port conflict");
   process.exit(-1);
 }
 
-console.log(
-  `Server running at http://${config.addr}:${config.port}/`
-);
+console.log(`Server running at http://localhost:${config.port}/`);

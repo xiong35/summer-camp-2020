@@ -1,4 +1,4 @@
-exports.getFmtTime = () => {
+exports.getFmtTime = function () {
   let time = new Date();
 
   let minutes = time.getMinutes();

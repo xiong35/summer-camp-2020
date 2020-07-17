@@ -49,5 +49,10 @@
 
 - 09:15-12:00 写 vdom
 - 14:00-17:50 写 vdom, 终于终于终于写完了QwQ
-- 17:50-22:30 复习这几天的内容, 写学习笔记
+- 17:50-19:10 吃饭, 划水
+- 19:10-22:30 复习这几天的内容, 写学习笔记
+  - [js 类中函数 this 指向问题](http://www.xiong35.cn/blog2.0/articles/trap/96)
+  - [promise 的简(fu)单(za)实现](http://www.xiong35.cn/blog2.0/articles/trap/97)
+  - [仿react实现vDom(一)](http://www.xiong35.cn/blog2.0/articles/trap/98)
+  - [仿react实现vDom(二)](http://www.xiong35.cn/blog2.0/articles/trap/99)
 

@@ -51,8 +51,24 @@
 - 14:00-17:50 写 vdom, 终于终于终于写完了QwQ
 - 17:50-19:10 吃饭, 划水
 - 19:10-22:30 复习这几天的内容, 写学习笔记
-  - [js 类中函数 this 指向问题](http://www.xiong35.cn/blog2.0/articles/trap/96)
-  - [promise 的简(fu)单(za)实现](http://www.xiong35.cn/blog2.0/articles/trap/97)
-  - [仿react实现vDom(一)](http://www.xiong35.cn/blog2.0/articles/trap/98)
-  - [仿react实现vDom(二)](http://www.xiong35.cn/blog2.0/articles/trap/99)
 
+笔记地址:
+
+- [js 类中函数 this 指向问题](http://www.xiong35.cn/blog2.0/articles/trap/96)
+- [promise 的简(fu)单(za)实现](http://www.xiong35.cn/blog2.0/articles/trap/97)
+- [仿react实现vDom(一)](http://www.xiong35.cn/blog2.0/articles/trap/98)
+- [仿react实现vDom(二)](http://www.xiong35.cn/blog2.0/articles/trap/99)
+
+## 7-18
+
+主要任务: 学习webpack, 学习babel
+
+- 10:00-11:00 看 vue 双向绑定原理
+- 11:00-12:00 学习 webpack
+- 14:00-22:30 学习 webpack
+
+笔记地址:
+
+- [webpack学习笔记(简介)](http://xiong35.cn/blog2.0/articles/blog/100)
+- [webpack学习笔记(实操)](http://xiong35.cn/blog2.0/articles/blog/101)
+- [webpack学习笔记(性能优化)](http://xiong35.cn/blog2.0/articles/blog/102)

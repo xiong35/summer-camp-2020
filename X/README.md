@@ -72,3 +72,13 @@
 - [webpack学习笔记(简介)](http://xiong35.cn/blog2.0/articles/blog/100)
 - [webpack学习笔记(实操)](http://xiong35.cn/blog2.0/articles/blog/101)
 - [webpack学习笔记(性能优化)](http://xiong35.cn/blog2.0/articles/blog/102)
+
+## 7-19
+
+主要任务: 学习babel
+
+- 09:15-12:00 完成物理实验QwQ
+- 14:30-15:30 学习[The Super Tiny Compiler](https://github.com/xiong35/the-super-tiny-compiler)项目
+- 15:30-16:15 了解 babel
+- 16:15-18:00 babel文档写的我看不懂QwQ 不学了我去学计网了
+- 18:00-23:00 划水...

@@ -1,0 +1,20 @@
+$colors: (
+  light: #eee,
+  dark: #111,
+  pink: pink,
+);
+
+@function get-color($key) {
+  @if not map-has-key($map: $colors, $key: $key) {
+    @warn "color is not found"; // 在命令行显示信息
+    /* @error "color is not found"; // 在输出的css中加入错误提示的注释 */
+  }
+
+  @return map-get($colors, $key);
+}
+
+$text-color: #222;
+body {
+  color: $text-color;
+  background-color: get-color(pink);
+}

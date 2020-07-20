@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <script defer src="./index.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1 id="display"></h1>
+      <input type="text" name="input" id="input" />
+      <button id="inc">increment</button>
+    </div>
+  </body>
+  <script>
+    const deps = [];
+
+    const data = {
+      _value: "",
+    };
+    Object.defineProperty(data, "value", {
+      get() {
+        return data._value;
+      },
+      set(value) {
+        data._value = value;
+        deps.forEach((dep) => dep.notify(value));
+      },
+    });
+
+    const inputElement = document.getElementById("input");
+    inputElement.oninput = (e) => {
+      data.value = e.target.value;
+    };
+    const inputHandler = {
+      notify(value) {
+        inputElement.value = value;
+      },
+    };
+
+    const displayElement = document.getElementById("display");
+    displayElement.innerText = inputElement.value;
+    const displayHandler = {
+      notify(value) {
+        displayElement.innerText = value;
+      },
+    };
+
+    deps.push(displayHandler);
+    deps.push(inputHandler);
+
+    const btnElement = document.getElementById("inc");
+    btnElement.onclick = () => {
+      data.value = data.value * 1 + 1 + "";
+    };
+  </script>
+</html>

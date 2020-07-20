@@ -1,4 +1,8 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const MyScssPlugin = require("./plugins/MyScssPlugin.js");
+
 const { resolve } = require("path");
 
 module.exports = {
@@ -13,11 +17,19 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' })
+    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new MiniCssExtractPlugin({
+      filename: "css/main.css",
+    }),
+    new MyScssPlugin(),
   ],
 };

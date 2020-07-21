@@ -1,6 +1,14 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/market/market",
+    "pages/about/about",
+    "pages/search/search",
+    "pages/good/good",
+    "pages/myIdles/myIdles",
+    "pages/myWants/myWants",
+    "pages/myLikes/myLikes",
+    "pages/notice/notice",
+    "pages/feedback/feedback"
   ],
   "window": {
     "backgroundTextStyle": "light",

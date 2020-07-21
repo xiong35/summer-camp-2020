@@ -1,9 +1,27 @@
-<view class="tabbar" hover-class="none" hover-stop-propagation="false">
+<view id="tabbar" hover-class="none" hover-stop-propagation="false">
   <navigator class="nav-item tabbar-item" url="/pages/market/market" open-type="switchTab">
     <image src="{{img.getSrc(curPage, 'market')}}"></image>
     <text class="{{curPage==='market'?'active':''}}">市场</text>
   </navigator>
-  <view class="tabbar-item"></view>
+  <view class="tabbar-item">
+    <view class="{{open?'tabbar-mid-btn open':'tabbar-mid-btn'}}" bind:tap="handleBtnClick">
+      <view class="shader">
+        <view class="cross-container">
+          <view class="cross vertical"></view>
+          <view class="cross horizontal"></view>
+        </view>
+      </view>
+      <view class="hider"></view>
+      <navigator class="post-container left" url="/pages/postSale/postSale" open-type="navigate">
+        <image class="post-img" src="../static/img/post_sale.png" />
+        <text class="post-text">发布闲置</text>
+      </navigator>
+      <navigator class="post-container right" url="/pages/postBorrow/postBorrow" open-type="navigate">
+        <image class="post-img" src="../static/img/post_borrow.png" />
+        <text class="post-text">发布求购</text>
+      </navigator>
+    </view>
+  </view>
   <navigator class="nav-item tabbar-item" url="/pages/about/about" open-type="switchTab">
     <image src="{{img.getSrc(curPage, 'about')}}"></image>
     <text class="{{curPage==='about'?'active':''}}">我的</text>

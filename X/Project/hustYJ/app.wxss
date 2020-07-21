@@ -1,0 +1,7 @@
+page,
+#tabbar {
+  --theme: #ff6868;
+  --grey: #999999;
+  --pink: #fd97c5;
+  --orange: #ffa163;
+}

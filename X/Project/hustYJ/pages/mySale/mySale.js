@@ -1,4 +1,4 @@
-// pages/myIdles/myIdles.js
+// pages/mySale/mySale.js
 Page({
 
   /**

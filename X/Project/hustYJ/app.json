@@ -4,11 +4,14 @@
     "pages/about/about",
     "pages/search/search",
     "pages/good/good",
-    "pages/myIdles/myIdles",
-    "pages/myWants/myWants",
+    "pages/mySale/mySale",
+    "pages/myBorrow/myBorrow",
     "pages/myLikes/myLikes",
     "pages/notice/notice",
-    "pages/feedback/feedback"
+    "pages/feedback/feedback",
+    "pages/postBorrow/postBorrow",
+    "pages/postSale/postSale",
+    "pages/myLikes"
   ],
   "window": {
     "backgroundTextStyle": "light",

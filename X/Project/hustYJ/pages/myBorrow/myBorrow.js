@@ -1,4 +1,4 @@
-// pages/myLikes.js
+// pages/myBorrow/myBorrow.js
 Page({
 
   /**

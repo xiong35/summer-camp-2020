@@ -1,11 +1,13 @@
-.tabbar {
+#tabbar {
   display: flex;
   height: 100rpx;
   padding-bottom: 20rpx;
+  background-color: #fff;
 
   .tabbar-item {
     flex: 1;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -18,10 +20,124 @@
     text {
       padding-top: 16rpx;
       font-size: 28rpx;
-      color: #999999;
+      color: var(--grey);
     }
     .active {
-      color: #ff6868;
+      color: var(--theme);
+    }
+  }
+
+  .tabbar-mid-btn {
+    width: 108rpx;
+    height: 108rpx;
+    background-image: linear-gradient(
+      45deg,
+      var(--pink),
+      var(--orange)
+    );
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    top: -42rpx;
+
+    $len: 54rpx;
+
+    .shader {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: relative;
+      z-index: 9;
+      transition: all 0.3s;
+    }
+    .cross-container {
+      transition: all 0.3s;
+      width: 100%;
+      height: 100%;
+      .cross {
+        border: 0.5px solid white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .vertical {
+        width: 0;
+        height: $len;
+      }
+      .horizontal {
+        width: $len;
+        height: 0;
+      }
+    }
+  }
+  .hider {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  .post-container {
+    position: absolute;
+    bottom: -10px;
+    transform: scale(0.3);
+    z-index: 10;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    opacity: 0;
+    color: #333;
+    z-index: 3;
+    image {
+      width: 144rpx;
+      height: 144rpx;
+    }
+    &.left {
+      left: 0px;
+    }
+    &.right {
+      right: 0px;
+    }
+  }
+
+  .open {
+    background-image: linear-gradient(45deg, white, white);
+    .shader {
+      box-shadow: 1px 1px 3px #afafaf;
+      .cross-container {
+        transform: rotate(45deg+90deg);
+        .cross {
+          border: 0.5px solid #999;
+        }
+      }
+    }
+    .hider {
+      opacity: 0.88;
+      width: 3000rpx;
+      height: 3200rpx;
+    }
+    .post-container {
+      opacity: 1;
+      bottom: 150rpx;
+      transform: scale(1);
+
+      &.left {
+        left: -180rpx;
+      }
+      &.right {
+        right: -180rpx;
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-// pages/myLikes.js
+// pages/postSale/postSale.js
 Page({
 
   /**

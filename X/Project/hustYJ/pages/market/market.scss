@@ -1,14 +1,16 @@
-$height: 88rpx;
+$heightS: 88rpx;
+$heightT: 88rpx;
 
 .header {
   width: 750rpx;
-  height: $height;
+  height: $heightS;
   padding: 0 16rpx;
   color: var(--grey);
   position: fixed;
   top: 0;
   left: 0;
   background-color: #fff;
+  z-index: 2;
   .search-bar {
     height: 60rpx;
     width: 588rpx;
@@ -31,10 +33,11 @@ $height: 88rpx;
   justify-content: space-around;
   position: fixed;
   width: 750rpx;
-  height: 88rpx;
+  height: $heightT;
   left: 0;
   background-color: #fff;
-  top: $height;
+  top: $heightS;
+  z-index: 2;
   .tab-item {
     flex: 1;
     padding: 8px;
@@ -62,5 +65,24 @@ $height: 88rpx;
   }
   .active {
     color: var(--theme);
+  }
+}
+
+.card-container {
+  $top: $heightS + $heightT;
+  position: relative;
+  top: $top;
+  width: 750rpx;
+  padding: 9rpx;
+  z-index: 0;
+  .card {
+    padding: 9rpx;
+    float: left;
+    width: 173rpx * 2;
+    margin: 5rpx;
+    image {
+      width: 346rpx;
+      height: (346rpx/4) * 3;
+    }
   }
 }

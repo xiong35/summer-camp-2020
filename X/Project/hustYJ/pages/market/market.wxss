@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   background-color: #fff;
+  z-index: 2;
 }
 
 .header .search-bar {
@@ -36,6 +37,7 @@
   left: 0;
   background-color: #fff;
   top: 88rpx;
+  z-index: 2;
 }
 
 .tabs .tab-item {
@@ -70,4 +72,24 @@
 
 .tabs .active {
   color: var(--theme);
+}
+
+.card-container {
+  position: relative;
+  top: 176rpx;
+  width: 750rpx;
+  padding: 9rpx;
+  z-index: 0;
+}
+
+.card-container .card {
+  padding: 9rpx;
+  float: left;
+  width: 346rpx;
+  margin: 5rpx;
+}
+
+.card-container .card image {
+  width: 346rpx;
+  height: 259.5rpx;
 }

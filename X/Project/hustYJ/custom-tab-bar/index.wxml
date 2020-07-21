@@ -1,0 +1,31 @@
+<view class="tabbar" hover-class="none" hover-stop-propagation="false">
+  <navigator class="nav-item tabbar-item" url="/pages/market/market" open-type="switchTab">
+    <image src="{{img.getSrc(curPage, 'market')}}"></image>
+    <text class="{{curPage==='market'?'active':''}}">市场</text>
+  </navigator>
+  <view class="tabbar-item"></view>
+  <navigator class="nav-item tabbar-item" url="/pages/about/about" open-type="switchTab">
+    <image src="{{img.getSrc(curPage, 'about')}}"></image>
+    <text class="{{curPage==='about'?'active':''}}">我的</text>
+  </navigator>
+</view>
+<wxs module="img">
+function getSrc (curPage, curTab) {
+  var srcName;
+  if (curTab === "market"){
+    srcName = "sc";
+  } else {
+    srcName = "wd";
+  }
+
+  var src = ""
+  if(curPage === curTab){
+    src = "../static/img/tabbar-"+srcName+"-s.png"
+  } else {
+    src = "../static/img/tabbar-"+srcName+".png"
+  }
+  return src;
+}
+
+module.exports.getSrc = getSrc;
+</wxs>

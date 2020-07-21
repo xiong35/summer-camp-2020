@@ -16,6 +16,26 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
+  "tabBar": {
+    "custom": true,
+    "color": "#aeaeae",
+    "selectedColor": "#ff6868",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/market/market",
+        "text": "市场",
+        "iconPath": "./static/img/tabbar-sc.png",
+        "selectedIconPath": "./static/img/tabbar-sc-s.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "我的",
+        "iconPath": "./static/img/tabbar-wd.png",
+        "selectedIconPath": "./static/img/tabbar-wd-s.png"
+      }
+    ]
+  },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

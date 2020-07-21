@@ -1,5 +1,20 @@
 <!-- pages/market/market.wxml -->
 <view>
+  <view class="header d-flex">
+    <navigator class="search-bar d-flex" url="/pages/search/search" open-type="navigate">
+      <image src="../../static/img/search.png" />
+      <text>搜索闲置物品</text>
+    </navigator>
+    <view class="filter">
+      <image class="filter-icon" src="../../static/img/filter.svg" />
+    </view>
+  </view>
+  <view class="tabs d-flex">
+    <view wx:for="{{nameList}}" bind:tap="handleTap" wx:key="index" class="{{'tab-item d-flex '+(curPage==index?'active':'')}}" data-index="{{index}}">
+      {{item}}
+    </view>
+    <view class="{{'slider ind'+curPage}}"></view>
+  </view>
   <view>lorem lorem lorem loremlorem lorem lorem</view>
   <view>lorem lorem lorem loremlorem lorem lorem</view>
   <view>lorem lorem lorem loremlorem lorem lorem</view>

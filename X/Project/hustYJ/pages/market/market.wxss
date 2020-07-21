@@ -1,1 +1,73 @@
-/* pages/market/market.wxss */
+.header {
+  width: 750rpx;
+  height: 88rpx;
+  padding: 0 16rpx;
+  color: var(--grey);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.header .search-bar {
+  height: 60rpx;
+  width: 588rpx;
+  background-color: #f2f2f2;
+  border-radius: 30rpx;
+}
+
+.header .search-bar image {
+  margin: 0 4px;
+}
+
+.header image {
+  height: 40rpx;
+  margin: 0 44rpx;
+  width: 42rpx;
+  position: relative;
+  bottom: -3px;
+}
+
+.tabs {
+  justify-content: space-around;
+  position: fixed;
+  width: 750rpx;
+  height: 88rpx;
+  left: 0;
+  background-color: #fff;
+  top: 88rpx;
+}
+
+.tabs .tab-item {
+  flex: 1;
+  padding: 8px;
+  position: relative;
+  bottom: 2px;
+  transition: all 0.3s;
+}
+
+.tabs .slider {
+  width: 58rpx;
+  height: 0;
+  background-color: var(--theme);
+  border: 1.3px solid var(--theme);
+  position: relative;
+  top: 28rpx;
+  transition: all 0.3s;
+}
+
+.tabs .slider.ind0 {
+  left: -605rpx;
+}
+
+.tabs .slider.ind1 {
+  left: -376rpx;
+}
+
+.tabs .slider.ind2 {
+  left: -147rpx;
+}
+
+.tabs .active {
+  color: var(--theme);
+}

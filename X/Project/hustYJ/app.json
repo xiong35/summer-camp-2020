@@ -10,8 +10,7 @@
     "pages/notice/notice",
     "pages/feedback/feedback",
     "pages/postBorrow/postBorrow",
-    "pages/postSale/postSale",
-    "pages/myLikes"
+    "pages/postSale/postSale"
   ],
   "window": {
     "backgroundTextStyle": "light",

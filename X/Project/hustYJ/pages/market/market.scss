@@ -1,0 +1,66 @@
+$height: 88rpx;
+
+.header {
+  width: 750rpx;
+  height: $height;
+  padding: 0 16rpx;
+  color: var(--grey);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  .search-bar {
+    height: 60rpx;
+    width: 588rpx;
+    background-color: #f2f2f2;
+    border-radius: 30rpx;
+    image {
+      margin: 0 4px;
+    }
+  }
+  image {
+    height: 40rpx;
+    margin: 0 44rpx;
+    width: 42rpx;
+    position: relative;
+    bottom: -3px;
+  }
+}
+
+.tabs {
+  justify-content: space-around;
+  position: fixed;
+  width: 750rpx;
+  height: 88rpx;
+  left: 0;
+  background-color: #fff;
+  top: $height;
+  .tab-item {
+    flex: 1;
+    padding: 8px;
+    position: relative;
+    bottom: 2px;
+    transition: all 0.3s;
+  }
+  .slider {
+    width: 29 * 2rpx;
+    height: 0;
+    background-color: var(--theme);
+    border: 1.3px solid var(--theme);
+    position: relative;
+    top: 28rpx;
+    transition: all 0.3s;
+  }
+  .slider.ind0 {
+    left: -605rpx;
+  }
+  .slider.ind1 {
+    left: -((605rpx+147rpx)/2);
+  }
+  .slider.ind2 {
+    left: -147rpx;
+  }
+  .active {
+    color: var(--theme);
+  }
+}

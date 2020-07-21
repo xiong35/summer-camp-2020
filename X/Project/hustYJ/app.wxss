@@ -5,3 +5,9 @@ page,
   --pink: #fd97c5;
   --orange: #ffa163;
 }
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

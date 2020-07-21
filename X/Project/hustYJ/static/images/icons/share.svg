@@ -1,0 +1,16 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient y2="100%" y1="0%" x2="50%" x1="50%" id="share-a">
+   <stop stop-color="#FFAB5A" offset="0%"/>
+   <stop stop-color="#FF49A6" offset="100%"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="152" width="152" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m113,56.733333l-32.775,31.266667l0,-17.266667c-8.55,0 -28.975,-1.866666 -28.975,13.533334c0,11.2 7.125,22.4 18.525,24.733333c-18.05,-2.333333 -32.775,-14 -32.775,-35c0,-32.666667 37.525,-31.733333 43.225,-31.733333l0,-17.266667l32.775,31.733333z" fill="url(#share-a)"/>
+ </g>
+</svg>

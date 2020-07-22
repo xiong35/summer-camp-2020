@@ -12,8 +12,7 @@
     "pages/feedback/feedback",
     "pages/postWant/postWant",
     "pages/postSale/postSale",
-    "pages/goodPage/goodPage",
-    "pages/wantPage/wantPage"
+    "pages/goodPage/goodPage"
   ],
   "window": {
     "backgroundTextStyle": "light",

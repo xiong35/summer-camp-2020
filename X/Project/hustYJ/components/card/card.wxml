@@ -51,7 +51,7 @@ function getUrl(item, isWant) {
   if (!isWant) {
     path = "/pages/goodPage/goodPage?id="
   } else {
-    path = "/pages/wantPage/wantPage?want=true&id="
+    path = "/pages/goodPage/goodPage?want=true&id="
   }
   return path+_id
 }

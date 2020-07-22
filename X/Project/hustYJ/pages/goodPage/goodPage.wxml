@@ -7,14 +7,15 @@
 <!-- </view> -->
 <view class="detail">
   <text class="title">{{item.title}}</text>
-  <text class="price">￥{{item.sell_price}}</text>
+  <text class="price">￥{{item.sell_price||item.except_price||'暂无'}}</text>
   <text class="description">{{item.description}}</text>
   <view class="hr"></view>
   <text class="where">{{utils.getAddr(item.address)}}</text>
   <text class="when">{{utils.getDescription(now, item.create_at)}}前发布</text>
 </view>
+<view wx:if="{{!isWant}}" class="hot-status">{{utils.getHotStatus(item)}}</view>
 <view class="bottom">
-  <view bind:tap="collect" class="collect d-flex">
+  <view wx:if="{{!isWant}}" bind:tap="collect" class="collect d-flex">
     <image class="collect-icon" src="../../static/img/collect{{collected?'':'_no'}}.png" />
     <text>收藏</text>
   </view>
@@ -46,6 +47,11 @@ function getAddr(addr){
   return addr.split("|").join(" ")
 }
 
+function  getHotStatus(item) {
+  return "浏览"+(item.num_of_view+1)+" · 想要"+(item.num_of_want)
+}
+
 module.exports.getAddr = getAddr;
 module.exports.getDescription = getDescription;
+module.exports.getHotStatus = getHotStatus;
 </wxs>

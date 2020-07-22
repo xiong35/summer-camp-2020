@@ -67,6 +67,7 @@
     line-height: 0;
     border-radius: 0;
     font-size: 36rpx;
+    background-color: #fff;
     image {
       width: 35rpx;
       height: 35rpx;
@@ -84,4 +85,16 @@
     font-size: 36rpx;
     border-radius: 4px;
   }
+}
+
+.hot-status {
+  padding: 6px 12px;
+  font-size: 12px;
+  position: fixed;
+  right: 34rpx;
+  top: 28rpx;
+  background-color: #f9f9f9;
+  color: #888;
+  border-radius: 40px;
+  box-shadow: 2px 2px 5px #f0f0f088;
 }

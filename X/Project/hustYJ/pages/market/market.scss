@@ -72,14 +72,22 @@ $heightT: 88rpx;
   $top: $heightS + $heightT;
   position: relative;
   top: $top;
-  width: 730rpx;
-  margin: 0 auto;
+  width: 750rpx;
   z-index: 0;
-  justify-content: space-around;
   .left-container,
   .right-container {
+    float: left;
     width: 173rpx * 2;
-    position: relative;
-    top: 0;
+  }
+  .left-container {
+    margin-right: 10rpx;
+    margin-left: 20rpx;
+  }
+  .right-container {
+    margin-left: 10rpx;
+    margin-right: 19rpx;
+  }
+  .double-container {
+    padding: 0 20rpx;
   }
 }

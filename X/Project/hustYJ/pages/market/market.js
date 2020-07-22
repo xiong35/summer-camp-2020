@@ -10,6 +10,36 @@ const infoConfig = {
   per_page: 14,
 };
 
+const configs = [
+  {
+    type: 2,
+    category: [],
+    areas: [],
+    label: "new",
+    page: 0,
+    per_page: 14,
+    path: "market.index",
+  },
+  {
+    type: 2,
+    category: [],
+    areas: [],
+    label: "hot",
+    page: 0,
+    per_page: 14,
+    path: "market.index",
+  },
+  {
+    type: 2,
+    category: [],
+    areas: [],
+    label: "new",
+    page: 0,
+    per_page: 14,
+    path: "reward.index",
+  },
+];
+
 Page({
   data: {
     curPage: 0,
@@ -25,6 +55,7 @@ Page({
     this.setData({
       curPage: e.target.dataset.index,
     });
+    this.getItems(true);
   },
 
   /**
@@ -37,45 +68,48 @@ Page({
   async getItems(init) {
     if (init) {
       this.setData({
-        items: [],
+        leftItems: [],
+        rightItems: [],
+        leftH: 0,
+        rightH: 0,
         itemsPage: 0,
       });
     }
-    let config = {
-      ...infoConfig,
-      page: this.data.itemsPage,
-    };
-    const res = await request(
-      "market.index",
-      config,
-      "POST",
-      true
-    );
-
-    const newItems = res.data.data;
     let {
       leftH,
       rightH,
       leftItems,
       rightItems,
       itemsPage,
+      curPage,
     } = this.data;
 
-    newItems.forEach((item) => {
-      let curH = 0;
-      if (item.pictures.length > 0) {
-        curH = 225.33;
-      } else {
-        curH = 92.33;
-      }
-      if (leftH > rightH) {
-        rightItems.push(item);
-        rightH += curH;
-      } else {
-        leftItems.push(item);
-        leftH += curH;
-      }
-    });
+    let config = {
+      ...configs[curPage],
+      page: itemsPage,
+    };
+    const res = await request(config.path, config, "POST", true);
+
+    const newItems = res.data.data;
+    if (curPage === 2) {
+      leftItems = newItems;
+    } else {
+      newItems.forEach((item) => {
+        let curH = 0;
+        if (item.pictures.length > 0) {
+          curH = 225.33;
+        } else {
+          curH = 92.33;
+        }
+        if (leftH > rightH) {
+          rightItems.push(item);
+          rightH += curH;
+        } else {
+          leftItems.push(item);
+          leftH += curH;
+        }
+      });
+    }
 
     this.setData({
       rightH,
@@ -84,7 +118,6 @@ Page({
       leftItems,
       itemsPage: itemsPage + 1,
     });
-    console.log(newItems);
   },
   /**
    * 生命周期函数--监听页面显示

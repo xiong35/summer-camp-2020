@@ -15,12 +15,19 @@
     </view>
     <view class="{{'slider ind'+curPage}}"></view>
   </view>
-  <view class="card-container d-flex">
-    <view class="left-container">
-      <card items="{{leftItems}}"></card>
-    </view>
-    <view class="right-container">
-      <card items="{{rightItems}}"></card>
-    </view>
+  <view class="card-container">
+    <block wx:if="{{curPage!==2}}">
+      <view class="left-container">
+        <card items="{{leftItems}}"></card>
+      </view>
+      <view class="right-container">
+        <card items="{{rightItems}}"></card>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="double-container">
+        <card items="{{leftItems}}" isWant="{{true}}"></card>
+      </view>
+    </block>
   </view>
 </view>

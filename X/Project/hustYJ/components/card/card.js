@@ -4,7 +4,10 @@ Component({
     items: {
       type: Array,
       value: [],
-      observer: function () {},
+    },
+    isWant: {
+      type: Boolean,
+      value: false,
     },
   },
   data: {

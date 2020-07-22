@@ -1,15 +1,18 @@
-<view wx:for="{{items}}" wx:key="_id" class="card">
-  <image wx:if="{{item.pictures.length>0}}" src="{{item.pictures[0]+'-thumbnail'}}" mode="aspectFill" lazy-load="true" />
+<navigator url="{{utils.getUrl(item, isWant)}}" open-type="navigate" wx:for="{{items}}" wx:key="_id" class="card">
+  <image wx:if="{{item.pictures.length>0}}" src="{{item.pictures[0]+'-thumbnail'}}" mode="aspectFill" class="{{isWant?'double':'single'}}" lazy-load="true" />
   <view class="card-info">
-    <text class="price">￥{{item.sell_price}}</text>
-    <text class="description">{{util.fmt(item.title+item.description)}}</text>
+    <text class="price">￥{{item.sell_price||item.except_price}}</text>
+    <text class="description">{{utils.fmt(item, isWant)}}</text>
+    <view class="detail" wx:if="{{isWant}}">
+      <text>{{utils.fmt(item, false)}}</text>
+    </view>
     <view class="info">
-      <text class="where">{{util.getAddr(item.address)}}</text>
-      <text class="when">{{util.getDescription(now, item.update_at)+"前发布"}}</text>
+      <text class="where">{{utils.getAddr(item.address)}}</text>
+      <text class="when">{{utils.getDescription(now, item.update_at)+"前发布"}}</text>
     </view>
   </view>
-</view>
-<wxs module="util">
+</navigator>
+<wxs module="utils">
 function getDescription (now, timestamp) {
   var diff = now*1/1000 - timestamp
   var diffHour = diff / 60 / 60
@@ -31,14 +34,30 @@ function getAddr(addr){
   return addr.split("|").join("")
 }
 
-function fmt(text){
+function fmt(item, isWant){
+  if(isWant){
+    return item.title
+  }
+  var text = item.title + item.description
   if (text.length>13) {
     return text.slice(0,13)+'...'
   }
   return text
 }
 
+function getUrl(item, isWant) {
+  var _id = item._id
+  var path;
+  if (!isWant) {
+    path = "/pages/goodPage/goodPage"
+  } else {
+    path = "/pages/wantPage/wantPage"
+  }
+  return path+"?_id="+_id
+}
+
 module.exports.getDescription = getDescription;
 module.exports.getAddr = getAddr;
 module.exports.fmt = fmt;
+module.exports.getUrl = getUrl;
 </wxs>

@@ -77,15 +77,26 @@
 .card-container {
   position: relative;
   top: 176rpx;
-  width: 730rpx;
-  margin: 0 auto;
+  width: 750rpx;
   z-index: 0;
-  justify-content: space-around;
 }
 
 .card-container .left-container,
 .card-container .right-container {
+  float: left;
   width: 346rpx;
-  position: relative;
-  top: 0;
+}
+
+.card-container .left-container {
+  margin-right: 10rpx;
+  margin-left: 20rpx;
+}
+
+.card-container .right-container {
+  margin-left: 10rpx;
+  margin-right: 19rpx;
+}
+
+.card-container .double-container {
+  padding: 0 20rpx;
 }

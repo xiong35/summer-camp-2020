@@ -6,9 +6,19 @@
   box-shadow: 2px 3px 10px #d2d2d2;
 }
 
-.card image {
+.card .single {
   width: 346rpx;
   height: 259.5rpx;
+}
+
+.card .double {
+  width: 100%;
+  height: 259.5rpx;
+}
+
+.card .detail {
+  color: #bbb;
+  margin-top: 4px;
 }
 
 .card .card-info {
@@ -34,5 +44,5 @@
   margin-top: 30rpx;
   font-size: 12px;
   justify-content: space-between;
-  color: #ccc;
+  color: #bbb;
 }

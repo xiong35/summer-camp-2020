@@ -10,6 +10,8 @@
     "pages/notice/notice",
     "pages/feedback/feedback",
     "pages/postBorrow/postBorrow",
+    "pages/goodPage/goodPage",
+    "pages/wantPage/wantPage",
     "pages/postSale/postSale"
   ],
   "window": {

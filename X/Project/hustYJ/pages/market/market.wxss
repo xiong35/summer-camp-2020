@@ -45,7 +45,7 @@
   padding: 8px;
   position: relative;
   bottom: 2px;
-  transition: all 0.3s;
+  transition: all 0.3s linear;
 }
 
 .tabs .slider {
@@ -77,19 +77,15 @@
 .card-container {
   position: relative;
   top: 176rpx;
-  width: 750rpx;
-  padding: 9rpx;
+  width: 730rpx;
+  margin: 0 auto;
   z-index: 0;
+  justify-content: space-around;
 }
 
-.card-container .card {
-  padding: 9rpx;
-  float: left;
+.card-container .left-container,
+.card-container .right-container {
   width: 346rpx;
-  margin: 5rpx;
-}
-
-.card-container .card image {
-  width: 346rpx;
-  height: 259.5rpx;
+  position: relative;
+  top: 0;
 }

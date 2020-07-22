@@ -14,9 +14,11 @@ Page({
   data: {
     curPage: 0,
     nameList: ["最新", "最热", "求购"],
-    items: [],
-    now: new Date() * 1,
     itemsPage: 0,
+    leftH: 0,
+    rightH: 0,
+    leftItems: [],
+    rightItems: [],
   },
 
   handleTap(e) {
@@ -50,11 +52,39 @@ Page({
       true
     );
 
-    this.setData({
-      items: this.data.items.concat(res.data.data),
-      itemsPage: this.data.itemsPage + 1,
+    const newItems = res.data.data;
+    let {
+      leftH,
+      rightH,
+      leftItems,
+      rightItems,
+      itemsPage,
+    } = this.data;
+
+    newItems.forEach((item) => {
+      let curH = 0;
+      if (item.pictures.length > 0) {
+        curH = 225.33;
+      } else {
+        curH = 92.33;
+      }
+      if (leftH > rightH) {
+        rightItems.push(item);
+        rightH += curH;
+      } else {
+        leftItems.push(item);
+        leftH += curH;
+      }
     });
-    console.log(res.data.data);
+
+    this.setData({
+      rightH,
+      leftH,
+      rightItems,
+      leftItems,
+      itemsPage: itemsPage + 1,
+    });
+    console.log(newItems);
   },
   /**
    * 生命周期函数--监听页面显示

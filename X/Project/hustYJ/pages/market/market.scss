@@ -43,7 +43,7 @@ $heightT: 88rpx;
     padding: 8px;
     position: relative;
     bottom: 2px;
-    transition: all 0.3s;
+    transition: all 0.3s linear;
   }
   .slider {
     width: 29 * 2rpx;
@@ -72,17 +72,14 @@ $heightT: 88rpx;
   $top: $heightS + $heightT;
   position: relative;
   top: $top;
-  width: 750rpx;
-  padding: 9rpx;
+  width: 730rpx;
+  margin: 0 auto;
   z-index: 0;
-  .card {
-    padding: 9rpx;
-    float: left;
+  justify-content: space-around;
+  .left-container,
+  .right-container {
     width: 173rpx * 2;
-    margin: 5rpx;
-    image {
-      width: 346rpx;
-      height: (346rpx/4) * 3;
-    }
+    position: relative;
+    top: 0;
   }
 }

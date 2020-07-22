@@ -15,50 +15,12 @@
     </view>
     <view class="{{'slider ind'+curPage}}"></view>
   </view>
-  <view class="card-container">
-    <view wx:for="{{items}}" wx:key="_id" class="card">
-      <image wx:if="{{item.pictures.length>0}}" src="{{item.pictures[0]+'-thumbnail'}}" mode="aspectFill" lazy-load="true" />
-      <view class="card-info">
-        <text class="price">￥{{item.sell_price}}</text>
-        <text class="description">{{util.fmt(item.description)}}</text>
-        <view class="info">
-          <text class="where">{{util.getAddr(item.address)}}</text>
-          <text class="when">{{util.getDescription(now, item.update_at)+"前发布"}}</text>
-        </view>
-      </view>
+  <view class="card-container d-flex">
+    <view class="left-container">
+      <card items="{{leftItems}}"></card>
+    </view>
+    <view class="right-container">
+      <card items="{{rightItems}}"></card>
     </view>
   </view>
 </view>
-<wxs module="util">
-function getDescription (now, timestamp) {
-  var diff = now*1/1000 - timestamp
-  var diffHour = diff / 60 / 60
-  var diffDay = diffHour / 24
-  var diffMonth = diffDay / 30
-  if (diffHour<1) {
-    return "不足1小时"
-  }
-  if (diffDay<1) {
-    return ~~diffHour+"小时"
-  }
-  if (diffMonth<1) {
-    return ~~diffDay+"天"
-  }
-  return ~~diffMonth+"个月"
-}
-
-function getAddr(addr){
-  return addr.split("|").join("")
-}
-
-function fmt(text){
-  if (text.length>15) {
-    return text.slice(0,15)+'...'
-  }
-  return text
-}
-
-module.exports.getDescription = getDescription;
-module.exports.getAddr = getAddr;
-module.exports.fmt = fmt;
-</wxs>

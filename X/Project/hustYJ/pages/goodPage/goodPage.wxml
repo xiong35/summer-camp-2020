@@ -1,2 +1,51 @@
-<!--pages/goodPage/goodPage.wxml-->
-<text>pages/goodPage/goodPage.wxml</text>
+<!-- <view class="swiper"> -->
+<swiper class="swiper" indicator-dots autoplay circular>
+  <swiper-item wx:for="{{item.pictures}}" wx:key="*this">
+    <image class="swiper-item" src="{{item}}" mode="aspectFit" />
+  </swiper-item>
+</swiper>
+<!-- </view> -->
+<view class="detail">
+  <text class="title">{{item.title}}</text>
+  <text class="price">￥{{item.sell_price}}</text>
+  <text class="description">{{item.description}}</text>
+  <view class="hr"></view>
+  <text class="where">{{utils.getAddr(item.address)}}</text>
+  <text class="when">{{utils.getDescription(now, item.create_at)}}前发布</text>
+</view>
+<view class="bottom">
+  <view bind:tap="collect" class="collect d-flex">
+    <image class="collect-icon" src="../../static/img/collect{{collected?'':'_no'}}.png" />
+    <text>收藏</text>
+  </view>
+  <button open-type="share" class="share d-flex">
+    <image class="share-icon" src="../../static/img/share.png" />
+    <text>分享</text>
+  </button>
+  <view bind:tap="copy" class="copy d-flex">微信ID</view>
+</view>
+<wxs module="utils">
+function getDescription (now, timestamp) {
+  var diff = now*1/1000 - timestamp
+  var diffHour = diff / 60 / 60
+  var diffDay = diffHour / 24
+  var diffMonth = diffDay / 30
+  if (diffHour<1) {
+    return "不足1小时"
+  }
+  if (diffDay<1) {
+    return ~~diffHour+"小时"
+  }
+  if (diffMonth<1) {
+    return ~~diffDay+"天"
+  }
+  return ~~diffMonth+"月"
+}
+
+function getAddr(addr){
+  return addr.split("|").join(" ")
+}
+
+module.exports.getAddr = getAddr;
+module.exports.getDescription = getDescription;
+</wxs>

@@ -78,6 +78,13 @@
 					"pathName": "pages/searchResult/searchResult",
 					"query": "kw=电动车",
 					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "good page",
+					"pathName": "pages/goodPage/goodPage",
+					"query": "id=5f082438780e5b7c6a39c52d",
+					"scene": null
 				}
 			]
 		}

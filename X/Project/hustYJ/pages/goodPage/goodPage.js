@@ -1,49 +1,39 @@
 // pages/goodPage/goodPage.js
-Page({
-  /**
-   * 页面的初始数据
-   */
-  data: {},
+import { request } from "../../network/request";
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    console.log(options);
+Page({
+  data: {
+    item: null,
+    now: new Date() - 0,
+    collected: false,
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {},
+  async onLoad(options) {
+    const { id, want } = options;
+    let path = want ? "reward.get" : "market.get";
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {},
+    const res = await request(path, { _id: id }, "POST", true);
+    this.setData({
+      item: res.data.data,
+      collected: res.data.data.is_collect,
+    });
+  },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {},
+  async collect() {
+    const res = await request(
+      "market.collect",
+      { _id: this.data.item._id },
+      "POST",
+      true
+    );
+    this.setData({
+      collected: !this.data.collected,
+    });
+  },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {},
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {},
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {},
+  copy() {
+    wx.setClipboardData({
+      data: this.data.item.contact_way,
+    });
+  },
 });

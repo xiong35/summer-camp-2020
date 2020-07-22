@@ -27,7 +27,7 @@ function getDescription (now, timestamp) {
   if (diffMonth<1) {
     return ~~diffDay+"天"
   }
-  return ~~diffMonth+"个月"
+  return ~~diffMonth+"月"
 }
 
 function getAddr(addr){
@@ -49,11 +49,11 @@ function getUrl(item, isWant) {
   var _id = item._id
   var path;
   if (!isWant) {
-    path = "/pages/goodPage/goodPage"
+    path = "/pages/goodPage/goodPage?id="
   } else {
-    path = "/pages/wantPage/wantPage"
+    path = "/pages/wantPage/wantPage?want=true&id="
   }
-  return path+"?_id="+_id
+  return path+_id
 }
 
 module.exports.getDescription = getDescription;

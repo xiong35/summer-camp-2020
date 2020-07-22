@@ -1,0 +1,87 @@
+.swiper {
+  width: 720rpx;
+  height: 720rpx * 0.8;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 15rpx;
+  .swiper-item {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+  }
+}
+
+.detail {
+  padding: 20rpx;
+  .title,
+  .price {
+    font-size: 40rpx;
+  }
+  .title {
+    float: left;
+    color: #333;
+  }
+  .price {
+    float: right;
+    color: var(--theme);
+  }
+  .description {
+    clear: both;
+    display: block;
+    padding: 36rpx 0;
+    color: #666;
+  }
+  .hr {
+    width: 100%;
+    height: 0;
+    border: 0.5px solid #ddd;
+    margin-bottom: 36rpx;
+  }
+  .where,
+  .when {
+    font-size: 24rpx;
+    color: #ccc;
+  }
+  .where {
+    float: left;
+  }
+  .when {
+    float: right;
+  }
+}
+
+.bottom {
+  position: fixed;
+  bottom: 36rpx;
+  display: flex;
+  width: 710rpx;
+  height: 96rpx;
+  left: 20rpx;
+  .collect,
+  .share {
+    flex: 0 0 25%;
+    color: var(--grey);
+    font-weight: normal;
+    padding: 0;
+    line-height: 0;
+    border-radius: 0;
+    font-size: 36rpx;
+    image {
+      width: 35rpx;
+      height: 35rpx;
+      margin: 3px;
+    }
+  }
+  .copy {
+    flex: 1;
+    color: white;
+    background-image: linear-gradient(
+      45deg,
+      var(--pink),
+      var(--orange)
+    );
+    font-size: 36rpx;
+    border-radius: 4px;
+  }
+}

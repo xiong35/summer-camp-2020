@@ -100,3 +100,45 @@
 .card-container .double-container {
   padding: 0 20rpx;
 }
+
+.filter-page {
+  position: fixed;
+  width: 0;
+  height: 0;
+  z-index: 20;
+  left: 0;
+  top: 0;
+}
+
+.filter-page .filter-hider {
+  opacity: 0;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.filter-page .tabs-container {
+  position: relative;
+  transition: all 0.3s;
+  left: 750rpx;
+  height: 100vh;
+  width: 600rpx;
+  background-color: red;
+}
+
+.filter-page.is-open {
+  display: block;
+}
+
+.filter-page.is-open .filter-hider {
+  opacity: 0.8;
+  display: block;
+}
+
+.filter-page.is-open .tabs-container {
+  left: 150rpx;
+}

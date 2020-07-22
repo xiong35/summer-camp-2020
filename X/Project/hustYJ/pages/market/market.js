@@ -1,15 +1,6 @@
 // pages/market/market.js
 import { request } from "../../network/request";
 
-const infoConfig = {
-  type: 2,
-  category: [],
-  areas: [],
-  label: "new",
-  page: 0,
-  per_page: 14,
-};
-
 const configs = [
   {
     type: 2,
@@ -49,6 +40,7 @@ Page({
     rightH: 0,
     leftItems: [],
     rightItems: [],
+    filterIsOpen: false,
   },
 
   handleTap(e) {
@@ -56,6 +48,13 @@ Page({
       curPage: e.target.dataset.index,
     });
     this.getItems(true);
+  },
+
+  toggleFilter() {
+    console.log("yap");
+    this.setData({
+      filterIsOpen: !this.data.filterIsOpen,
+    });
   },
 
   /**

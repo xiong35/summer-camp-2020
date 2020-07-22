@@ -6,7 +6,8 @@
       <text>搜索闲置物品</text>
     </navigator>
     <view class="filter">
-      <image class="filter-icon" src="../../static/img/filter.svg" />
+      <image wx:if="{{curPage===2}}" class="filter-icon" src="../../static/img/filter.svg" />
+      <image wx:else bind:tap="toggleFilter" class="filter-icon" src="../../static/img/filter-a.png" />
     </view>
   </view>
   <view class="tabs d-flex">
@@ -29,5 +30,9 @@
         <card items="{{leftItems}}" isWant="{{true}}"></card>
       </view>
     </block>
+  </view>
+  <view class="{{'filter-page '+(filterIsOpen?'is-open':'')}}">
+    <view bind:tap="toggleFilter" class="filter-hider"></view>
+    <view class="tabs-container"></view>
   </view>
 </view>

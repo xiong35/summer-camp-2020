@@ -1,6 +1,8 @@
 $heightS: 88rpx;
 $heightT: 88rpx;
 
+$colored: linear-gradient(45deg, var(--pink), var(--orange));
+
 .header {
   width: 750rpx;
   height: $heightS;
@@ -117,7 +119,42 @@ $heightT: 88rpx;
     left: 750rpx;
     height: 100vh;
     width: 600rpx;
-    background-color: red;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    .submit {
+      width: 208rpx * 2;
+      height: 48rpx * 2;
+      background-image: $colored;
+      margin-bottom: 27rpx * 2;
+      border-radius: 4px;
+      color: #fff;
+      font-size: px;
+    }
+    .choice-container {
+      width: 100%;
+      display: block;
+      .cat-title {
+        color: var(--theme);
+        margin: 30rpx;
+        display: block;
+      }
+      .choice-tab {
+        display: inline-block;
+        width: 160rpx;
+        line-height: 68rpx;
+        background-color: #f4f4f4;
+        margin: 0rpx 0 20rpx 30rpx;
+        text-align: center;
+        font-size: 28rpx;
+        border-radius: 4px;
+        transition: all 0.3s;
+        &.active {
+          background-image: $colored;
+          color: white;
+        }
+      }
+    }
   }
   &.is-open {
     display: block;

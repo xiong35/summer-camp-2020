@@ -31,6 +31,30 @@ const configs = [
   },
 ];
 
+const choices = [
+  {
+    title: "类别",
+    tabs: [
+      "电子设备",
+      "书籍资料",
+      "宿舍百货",
+      "乐器",
+      "门票卡劵",
+      "美妆护肤",
+      "女装",
+      "男装",
+      "鞋帽配饰",
+      "代步工具",
+      "户外运动",
+      "其它",
+    ],
+  },
+  {
+    title: "区域",
+    tabs: ["韵苑", "沁苑", "紫菘", "研究生公寓", "博士生公寓"],
+  },
+];
+
 Page({
   data: {
     curPage: 0,
@@ -41,6 +65,8 @@ Page({
     leftItems: [],
     rightItems: [],
     filterIsOpen: false,
+    choices,
+    chosen: [[], []],
   },
 
   handleTap(e) {
@@ -51,10 +77,31 @@ Page({
   },
 
   toggleFilter() {
-    console.log("yap");
     this.setData({
       filterIsOpen: !this.data.filterIsOpen,
     });
+  },
+
+  chooseTab(e) {
+    let { chosen } = this.data;
+    let { cat, tab } = e.target.dataset;
+    let targetChosen = chosen[cat];
+    let ind = targetChosen.indexOf(tab);
+
+    if (ind !== -1) {
+      targetChosen.splice(ind, 1);
+    } else {
+      targetChosen.push(tab);
+    }
+
+    this.setData({
+      chosen,
+    });
+  },
+
+  getFilteredItems() {
+    this.getItems(true, true);
+    this.toggleFilter();
   },
 
   /**
@@ -64,7 +111,7 @@ Page({
     this.getItems(true);
   },
 
-  async getItems(init) {
+  async getItems(init, filtered = false) {
     if (init) {
       this.setData({
         leftItems: [],
@@ -81,13 +128,24 @@ Page({
       rightItems,
       itemsPage,
       curPage,
+      chosen,
     } = this.data;
 
     let config = {
       ...configs[curPage],
       page: itemsPage,
     };
+
+    if (filtered) {
+      config.category = chosen[0].map((i) => i + 1);
+      config.areas = chosen[1].map((i) => choices[1].tabs[i]);
+    }
+
     const res = await request(config.path, config, "POST", true);
+
+    if (!res.data || !res.data.success) {
+      return false;
+    }
 
     const newItems = res.data.data;
     if (curPage === 2) {
@@ -117,6 +175,8 @@ Page({
       leftItems,
       itemsPage: itemsPage + 1,
     });
+
+    return true;
   },
   /**
    * 生命周期函数--监听页面显示
@@ -133,7 +193,16 @@ Page({
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-    this.getItems(false);
+  onReachBottom: async function () {
+    wx.showLoading({
+      title: "加载中...",
+    });
+    let res = await this.getItems(false);
+    wx.hideLoading();
+    if (!res) {
+      wx.wx.showToast({
+        title: "已无更多数据",
+      });
+    }
   },
 });

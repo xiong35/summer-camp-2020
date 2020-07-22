@@ -3,6 +3,7 @@
     "pages/market/market",
     "pages/about/about",
     "pages/search/search",
+    "pages/searchResult/searchResult",
     "pages/good/good",
     "pages/mySale/mySale",
     "pages/myWant/myWant",

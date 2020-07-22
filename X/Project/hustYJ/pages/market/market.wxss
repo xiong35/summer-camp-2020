@@ -130,7 +130,47 @@
   left: 750rpx;
   height: 100vh;
   width: 600rpx;
-  background-color: red;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filter-page .tabs-container .submit {
+  width: 416rpx;
+  height: 96rpx;
+  background-image: linear-gradient(45deg, var(--pink), var(--orange));
+  margin-bottom: 54rpx;
+  border-radius: 4px;
+  color: #fff;
+  font-size: px;
+}
+
+.filter-page .tabs-container .choice-container {
+  width: 100%;
+  display: block;
+}
+
+.filter-page .tabs-container .choice-container .cat-title {
+  color: var(--theme);
+  margin: 30rpx;
+  display: block;
+}
+
+.filter-page .tabs-container .choice-container .choice-tab {
+  display: inline-block;
+  width: 160rpx;
+  line-height: 68rpx;
+  background-color: #f4f4f4;
+  margin: 0rpx 0 20rpx 30rpx;
+  text-align: center;
+  font-size: 28rpx;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.filter-page .tabs-container .choice-container .choice-tab.active {
+  background-image: linear-gradient(45deg, var(--pink), var(--orange));
+  color: white;
 }
 
 .filter-page.is-open {

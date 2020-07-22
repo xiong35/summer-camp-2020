@@ -34,6 +34,27 @@
 </view>
 <view class="{{'filter-page '+(filterIsOpen?'is-open':'')}}">
   <view bind:tap="toggleFilter" class="filter-hider"></view>
-  <view class="tabs-container"></view>
+  <view class="tabs-container d-flex">
+    <view class="choice-container">
+      <block wx:for="{{choices}}" wx:for-item="choice">
+        <text class="cat-title">{{choice.title}}</text>
+        <view class="{{utils.getTabClass(index, ind, chosen)}}" wx:for="{{choice.tabs}}" wx:key="tab" wx:for-item="tab" wx:for-index="ind" data-cat="{{index}}" data-tab="{{ind}}" bind:tap="chooseTab">
+          {{tab}}
+        </view>
+      </block>
+    </view>
+    <view bind:tap="getFilteredItems" class="submit d-flex">完成</view>
+  </view>
 </view>
 <tabbar cur-page="market"></tabbar>
+<wxs module="utils">
+function getTabClass (cat, ind, chosen) {
+  var baseClass = "choice-tab";
+  if (chosen[cat].indexOf(ind)!==-1) {
+    return baseClass+" active";
+  }
+  return baseClass
+}
+
+module.exports.getTabClass = getTabClass;
+</wxs>

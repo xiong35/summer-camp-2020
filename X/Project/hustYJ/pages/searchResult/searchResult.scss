@@ -1,0 +1,17 @@
+.card-container {
+  position: relative;
+  width: 750rpx;
+  .left-container,
+  .right-container {
+    float: left;
+    width: 173rpx * 2;
+  }
+  .left-container {
+    margin-right: 10rpx;
+    margin-left: 20rpx;
+  }
+  .right-container {
+    margin-left: 10rpx;
+    margin-right: 19rpx;
+  }
+}

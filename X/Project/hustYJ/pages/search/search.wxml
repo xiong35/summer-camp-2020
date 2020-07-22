@@ -1,2 +1,24 @@
-<!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view class="header d-flex">
+  <view class="search-bar d-flex" url="/pages/search/search" open-type="navigate">
+    <image src="../../static/img/search.png" />
+    <input bind:input="onInput" auto-focus placeholder="搜索闲置物品" />
+  </view>
+  <view bind:tap="search" data-keyword="{{input}}" class="trigger-search">
+    <text>搜索</text>
+  </view>
+</view>
+<view class="wrap">
+  <view class="history">
+    <text class="title">搜索历史</text>
+    <view class="input-item" data-keyword="{{item}}" bind:tap="search" wx:if="{{item}}" wx:for="{{history}}">
+      {{item}}
+    </view>
+    <view class="input-item" wx:if="{{history.length==0}}">暂无</view>
+  </view>
+  <view class="hot">
+    <text class="title">热门搜索</text>
+    <view class="input-item" data-keyword="{{item}}" bind:tap="search" wx:if="{{item}}" wx:for="{{hot}}">
+      {{item}}
+    </view>
+  </view>
+</view>

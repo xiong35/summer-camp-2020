@@ -1,0 +1,8 @@
+<view class="card-container">
+  <view class="left-container">
+    <card items="{{leftItems}}"></card>
+  </view>
+  <view class="right-container">
+    <card items="{{rightItems}}"></card>
+  </view>
+</view>

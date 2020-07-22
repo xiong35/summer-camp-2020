@@ -69,6 +69,14 @@
 					"id": -1,
 					"name": "search",
 					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "search res",
+					"pathName": "pages/searchResult/searchResult",
+					"query": "kw=电动车",
 					"scene": null
 				}
 			]

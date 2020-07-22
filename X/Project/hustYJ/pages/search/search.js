@@ -1,66 +1,59 @@
 // pages/search/search.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    input: "",
+    history: [],
+    hot: [],
+  },
 
+  onInput(e) {
+    this.setData({
+      input: e.detail.value,
+    });
+  },
+
+  search(e) {
+    let { keyword } = e.currentTarget.dataset;
+    let history = wx.getStorageSync("searchHistory") || [];
+    let ind = history.indexOf(keyword);
+    if (ind !== -1) {
+      history.splice(ind, 1);
+    }
+    history.unshift(keyword);
+    wx.setStorage({
+      key: "searchHistory",
+      data: history.slice(0, 5),
+    });
+
+    wx.navigateTo({
+      url: "/pages/searchResult/searchResult?kw=" + keyword,
+    });
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad(options) {
+    let history = wx.getStorageSync("searchHistory") || [];
+    this.setData({
+      history,
+    });
 
+    wx.request({
+      url: "https://youjie.hustonline.net/2.0/search.hot",
+      success: (result) => {
+        this.setData({
+          hot: result.data.data,
+        });
+      },
+    });
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+  onReady: function () {},
+});

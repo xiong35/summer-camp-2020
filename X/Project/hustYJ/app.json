@@ -5,14 +5,14 @@
     "pages/search/search",
     "pages/good/good",
     "pages/mySale/mySale",
-    "pages/myBorrow/myBorrow",
+    "pages/myWant/myWant",
     "pages/myLikes/myLikes",
     "pages/notice/notice",
     "pages/feedback/feedback",
-    "pages/postBorrow/postBorrow",
+    "pages/postWant/postWant",
+    "pages/postSale/postSale",
     "pages/goodPage/goodPage",
-    "pages/wantPage/wantPage",
-    "pages/postSale/postSale"
+    "pages/wantPage/wantPage"
   ],
   "window": {
     "backgroundTextStyle": "light",

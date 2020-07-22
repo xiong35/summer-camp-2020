@@ -1,4 +1,4 @@
-// pages/myBorrow/myBorrow.js
+// pages/postWant/postWant.js
 Page({
 
   /**

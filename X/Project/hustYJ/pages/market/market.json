@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "市场",
   "usingComponents": {
-    "card": "../../components/card/card"
+    "card": "../../components/card/card",
+    "tabbar": "../../components/custom-tab-bar/index"
   }
 }

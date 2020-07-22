@@ -1,5 +1,5 @@
 <view class="tabbar">
-  <navigator class="nav-item tabbar-item" url="/pages/market/market" open-type="switchTab">
+  <navigator class="nav-item tabbar-item" url="/pages/market/market" open-type="redirectTo">
     <image src="{{img.getSrc(curPage, 'market')}}"></image>
     <text class="{{curPage==='market'?'active':''}}">市场</text>
   </navigator>
@@ -13,16 +13,16 @@
       </view>
       <view class="hider"></view>
       <navigator class="post-container left" url="/pages/postSale/postSale" open-type="navigate">
-        <image class="post-img" src="../static/img/post_sale.png" />
+        <image class="post-img" src="../../static/img/post_sale.png" />
         <text class="post-text">发布闲置</text>
       </navigator>
       <navigator class="post-container right" url="/pages/postWant/postWant" open-type="navigate">
-        <image class="post-img" src="../static/img/post_borrow.png" />
+        <image class="post-img" src="../../static/img/post_borrow.png" />
         <text class="post-text">发布求购</text>
       </navigator>
     </view>
   </view>
-  <navigator class="nav-item tabbar-item" url="/pages/about/about" open-type="switchTab">
+  <navigator class="nav-item tabbar-item" url="/pages/about/about" open-type="redirectTo">
     <image src="{{img.getSrc(curPage, 'about')}}"></image>
     <text class="{{curPage==='about'?'active':''}}">我的</text>
   </navigator>
@@ -38,9 +38,9 @@ function getSrc (curPage, curTab) {
 
   var src = ""
   if(curPage === curTab){
-    src = "../static/img/tabbar-"+srcName+"-s.png"
+    src = "../../static/img/tabbar-"+srcName+"-s.png"
   } else {
-    src = "../static/img/tabbar-"+srcName+".png"
+    src = "../../static/img/tabbar-"+srcName+".png"
   }
   return src;
 }

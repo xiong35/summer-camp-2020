@@ -1,14 +1,10 @@
 page,
-tab-bar,
-view,
-image,
-navigator,
-text {
+tabbar {
   --theme: #ff6868;
   --grey: #999999;
   --pink: #fd97c5;
   --orange: #ffa163;
-  z-index: 1;
+  z-index: auto;
 }
 
 .d-flex {

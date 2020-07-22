@@ -18,12 +18,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    const tabbar = this.getTabBar();
-    tabbar.setData({
-      curPage: "about",
-    });
-  },
+  onShow: function () {},
 
   /**
    * 生命周期函数--监听页面隐藏

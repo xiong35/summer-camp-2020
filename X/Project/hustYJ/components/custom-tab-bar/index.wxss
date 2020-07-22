@@ -1,9 +1,13 @@
 .tabbar {
+  position: fixed;
+  width: 750rpx;
+  bottom: 0px;
   padding-top: 12rpx;
   display: flex;
   height: 100rpx;
   padding-bottom: 20rpx;
   background-color: #fff;
+  z-index: 7;
 }
 
 .tabbar .tabbar-item {
@@ -85,7 +89,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.3s linear;
-  z-index: 1;
+  z-index: 5;
 }
 
 .tabbar .post-container {
@@ -101,7 +105,6 @@
   transition: all 0.3s linear;
   opacity: 0;
   color: #333;
-  z-index: 3;
 }
 
 .tabbar .post-container image {

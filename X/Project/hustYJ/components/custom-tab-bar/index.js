@@ -1,14 +1,12 @@
 //Component Object
 Component({
   properties: {
-    myProperty: {
+    curPage: {
       type: String,
-      value: "",
-      observer: function () {},
+      value: "market",
     },
   },
   data: {
-    curPage: "market",
     open: false,
   },
   methods: {
@@ -18,9 +16,4 @@ Component({
       });
     },
   },
-  created: function () {},
-  attached: function () {},
-  ready: function () {},
-  moved: function () {},
-  detached: function () {},
 });

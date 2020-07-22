@@ -30,7 +30,6 @@ $heightT: 88rpx;
 }
 
 .tabs {
-  justify-content: space-around;
   position: fixed;
   width: 750rpx;
   height: $heightT;
@@ -38,30 +37,33 @@ $heightT: 88rpx;
   background-color: #fff;
   top: $heightS;
   z-index: 2;
-  .tab-item {
-    flex: 1;
-    padding: 8px;
-    position: relative;
-    bottom: 2px;
-    transition: all 0.3s linear;
+  .tabs-items-container {
+    justify-content: space-around;
+    .tab-item {
+      flex: 1;
+      padding: 8px;
+      position: relative;
+      bottom: 2px;
+      transition: all 0.3s linear;
+    }
   }
   .slider {
     width: 29 * 2rpx;
-    height: 0;
+    height: 0px;
     background-color: var(--theme);
     border: 1.3px solid var(--theme);
     position: relative;
-    top: 28rpx;
+    top: -10rpx;
     transition: all 0.3s;
   }
   .slider.ind0 {
-    left: -605rpx;
+    left: 92rpx;
   }
   .slider.ind1 {
-    left: -((605rpx+147rpx)/2);
+    left: ((594rpx+92rpx)/2);
   }
   .slider.ind2 {
-    left: -147rpx;
+    left: 594rpx;
   }
   .active {
     color: var(--theme);
@@ -127,4 +129,7 @@ $heightT: 88rpx;
       left: 150rpx;
     }
   }
+}
+tabbar {
+  z-index: 30;
 }

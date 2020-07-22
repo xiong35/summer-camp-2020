@@ -30,7 +30,6 @@
 }
 
 .tabs {
-  justify-content: space-around;
   position: fixed;
   width: 750rpx;
   height: 88rpx;
@@ -40,7 +39,11 @@
   z-index: 2;
 }
 
-.tabs .tab-item {
+.tabs .tabs-items-container {
+  justify-content: space-around;
+}
+
+.tabs .tabs-items-container .tab-item {
   flex: 1;
   padding: 8px;
   position: relative;
@@ -50,24 +53,24 @@
 
 .tabs .slider {
   width: 58rpx;
-  height: 0;
+  height: 0px;
   background-color: var(--theme);
   border: 1.3px solid var(--theme);
   position: relative;
-  top: 28rpx;
+  top: -10rpx;
   transition: all 0.3s;
 }
 
 .tabs .slider.ind0 {
-  left: -605rpx;
+  left: 92rpx;
 }
 
 .tabs .slider.ind1 {
-  left: -376rpx;
+  left: 343rpx;
 }
 
 .tabs .slider.ind2 {
-  left: -147rpx;
+  left: 594rpx;
 }
 
 .tabs .active {
@@ -141,4 +144,8 @@
 
 .filter-page.is-open .tabs-container {
   left: 150rpx;
+}
+
+tabbar {
+  z-index: 30;
 }

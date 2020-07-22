@@ -29,10 +29,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options) {
-    this.getMore(true);
+    this.getItems(true);
   },
 
-  async getMore(init) {
+  async getItems(init) {
     if (init) {
       this.setData({
         items: [],
@@ -65,13 +65,13 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.getMore(true);
+    this.getItems(true);
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.getMore(false);
+    this.getItems(false);
   },
 });

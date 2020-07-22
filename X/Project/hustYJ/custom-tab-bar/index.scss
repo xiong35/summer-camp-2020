@@ -1,4 +1,4 @@
-#tabbar {
+.tabbar {
   padding-top: 12rpx;
   display: flex;
   height: 100rpx;
@@ -21,21 +21,17 @@
     text {
       padding-top: 16rpx;
       font-size: 28rpx;
-      color: var(--grey);
+      color: #999;
     }
     .active {
-      color: var(--theme);
+      color: #ff6868;
     }
   }
 
   .tabbar-mid-btn {
     width: 108rpx;
     height: 108rpx;
-    background-image: linear-gradient(
-      45deg,
-      var(--pink),
-      var(--orange)
-    );
+    background-image: linear-gradient(45deg, #fd97c5, #ffa163);
     border-radius: 50%;
     border: 4px solid white;
     position: absolute;

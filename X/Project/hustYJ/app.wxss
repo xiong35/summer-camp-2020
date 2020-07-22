@@ -1,5 +1,4 @@
-page,
-#tabbar {
+page {
   --theme: #ff6868;
   --grey: #999999;
   --pink: #fd97c5;

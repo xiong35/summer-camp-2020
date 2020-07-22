@@ -1,4 +1,4 @@
-<view id="tabbar" hover-class="none" hover-stop-propagation="false">
+<view class="tabbar">
   <navigator class="nav-item tabbar-item" url="/pages/market/market" open-type="switchTab">
     <image src="{{img.getSrc(curPage, 'market')}}"></image>
     <text class="{{curPage==='market'?'active':''}}">市场</text>

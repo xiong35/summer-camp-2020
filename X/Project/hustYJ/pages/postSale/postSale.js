@@ -162,6 +162,7 @@ Page({
       id,
       canSubmit,
       pictures,
+      postType,
     } = this.data;
 
     if (!canSubmit) {
@@ -170,21 +171,39 @@ Page({
 
     let data = {
       type: 2,
+      upload_times: 1,
       title,
       description: des,
       pictures,
-      rent_price: price,
-      sell_price: price,
-      origin_price: price,
+      sell_price: price * 1,
+      except_price: price * 1,
+      is_deal: 1,
       address:
         areas[curArea].title +
         "|" +
         (block ? block + "栋" : "全区"),
-      category: curCat,
+      area: areas[curArea].title,
+      category: curCat * 1,
       contact_way: id,
+      contract_way: id,
     };
 
-    let res = await request("market.publish", data, "POST", true);
+    let res = await request(
+      postType + ".publish",
+      data,
+      "POST",
+      true
+    );
     console.log(res);
+  },
+
+  onLoad(options) {
+    let { type } = options;
+    this.setData({
+      postType: type,
+    });
+    wx.setNavigationBarTitle({
+      title: type === "market" ? "发布闲置" : "发布求购",
+    });
   },
 });

@@ -25,6 +25,11 @@
   width: 42rpx;
 }
 
+.header .search-bar input {
+  width: 100%;
+  height: 100%;
+}
+
 .header .trigger-search {
   line-height: 40rpx;
   margin: 0 30rpx;

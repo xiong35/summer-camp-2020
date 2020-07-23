@@ -40,6 +40,15 @@ Page({
   },
 
   copy() {
+    const app = getApp();
+    const { gotUserInfo } = app.globalData;
+    if (gotUserInfo.status == 1) {
+      wx.navigateTo({
+        url: "/pages/postAuth/postAuth",
+      });
+      return;
+    }
+
     wx.setClipboardData({
       data: this.data.item.contact_way,
     });

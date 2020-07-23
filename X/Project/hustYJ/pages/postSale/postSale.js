@@ -194,7 +194,6 @@ Page({
       "POST",
       true
     );
-    console.log(res);
   },
 
   onLoad(options) {

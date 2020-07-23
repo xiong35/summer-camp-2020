@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="title box">
+    <text class="name split">姓名</text>
+    <input class="title-input" type="text" placeholder="请输入你的真实姓名" placeholder-style="{color:#999}" bindinput="nameInput"></input>
+  </view>
+  <view class="box">
+    <text class="name">证件类型</text>
+    <picker mode="selector" range="{{['校园卡']}}" value="0">
+      <view class="picked">校园卡</view>
+    </picker>
+  </view>
+  <view class="box">
+    <text class="name split">学号</text>
+    <input type="text" placeholder="请输入学号" placeholder-style="{color:#999;}" bindinput="idInput"></input>
+  </view>
+  <view class="box">
+    <text class="name split">联系方式</text>
+    <input type="text" placeholder="请输入联系方式" placeholder-style="{color:#999;}" bindinput="contactInput"></input>
+  </view>
+  <view class="devider"></view>
+  <text class="hint hint-1">请拍照上传校园卡正面</text>
+  <text class="hint hint-2">别怕! 保密! 光速通过哦!</text>
+  <image class="add-img" src="{{pictures.length>0?pictures[0]:'../../static/img/addpic.png'}}" bind:tap="addImg" mode="aspectFit"></image>
+  <image class="example-img" src="../../static/img/example.png" bind:tap="addImg"></image>
+  <view class="submit {{canSubmit?'active':''}} d-flex" bind:tap="submit">确认</view>
+</view>

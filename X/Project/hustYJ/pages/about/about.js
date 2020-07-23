@@ -15,11 +15,11 @@ Page({
   },
 
   async onLoad(options) {
-    let res = await request("user.index", {}, "GET", true);
+    // let res = await request("user.index", {}, "GET", true);
 
-    this.setData({
-      userInfo: res.data.data,
-    });
+    // this.setData({
+    //   userInfo: res.data.data,
+    // });
 
     const app = getApp();
     try {
@@ -27,6 +27,14 @@ Page({
       this.setData({
         avatarUrl,
         nickName,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+    try {
+      const userInfo = app.globalData.gotUserInfo;
+      this.setData({
+        userInfo,
       });
     } catch (err) {
       console.log(err);

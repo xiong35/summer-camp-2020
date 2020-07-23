@@ -8,6 +8,7 @@
     "pages/myWant/myWant",
     "pages/myCollect/myCollect",
     "pages/postSale/postSale",
+    "pages/postAuth/postAuth",
     "pages/goodPage/goodPage"
   ],
   "window": {

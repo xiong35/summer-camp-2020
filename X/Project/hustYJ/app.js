@@ -1,12 +1,9 @@
 //app.js
+import { request } from "./network/request";
 
 App({
-  onLaunch: function () {
+  onLaunch: async function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync("logs") || [];
-    logs.unshift(Date.now());
-    wx.setStorageSync("logs", logs);
-
     wx.getSetting({
       success: (res) => {
         if (res.authSetting["scope.userInfo"]) {
@@ -29,7 +26,11 @@ App({
         }
       },
     });
+
+    let res = await request("user.index", {}, "GET", true);
+    this.globalData.gotUserInfo = res.data.data;
   },
+
   globalData: {
     userInfo: null,
   },

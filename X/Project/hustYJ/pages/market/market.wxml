@@ -1,51 +1,54 @@
 <!-- pages/market/market.wxml -->
-<view class="header d-flex">
-  <navigator class="search-bar d-flex" url="/pages/search/search" open-type="navigate">
-    <image src="../../static/img/search.png" />
-    <text>搜索闲置物品</text>
-  </navigator>
-  <view class="filter">
-    <image wx:if="{{curPage===2}}" class="filter-icon" src="../../static/img/filter.svg" />
-    <image wx:else bind:tap="toggleFilter" class="filter-icon" src="../../static/img/filter-a.png" />
-  </view>
-</view>
-<view class="tabs">
-  <view class="tabs-items-container d-flex">
-    <view wx:for="{{nameList}}" bind:tap="handleTap" wx:key="index" class="{{'tab-item d-flex '+(curPage==index?'active':'')}}" data-index="{{index}}">
-      {{item}}
+<block>
+  <view class="header d-flex">
+    <navigator class="search-bar d-flex" url="/pages/search/search" open-type="navigate">
+      <image src="../../static/img/search.png" />
+      <text>搜索闲置物品</text>
+    </navigator>
+    <view class="filter">
+      <image wx:if="{{curPage===2}}" class="filter-icon" src="../../static/img/filter.svg" />
+      <image wx:else bind:tap="toggleFilter" class="filter-icon" src="../../static/img/filter-a.png" />
     </view>
   </view>
-  <view class="{{'slider ind'+curPage}}"></view>
-</view>
-<view class="card-container">
-  <block wx:if="{{curPage!==2}}">
-    <view class="left-container">
-      <card items="{{leftItems}}"></card>
+  <view class="tabs">
+    <view class="tabs-items-container d-flex">
+      <view wx:for="{{nameList}}" bind:tap="handleTap" wx:key="index" class="{{'tab-item d-flex '+(curPage==index?'active':'')}}" data-index="{{index}}">
+        {{item}}
+      </view>
     </view>
-    <view class="right-container">
-      <card items="{{rightItems}}"></card>
-    </view>
-  </block>
-  <block wx:else>
-    <view class="double-container">
-      <card items="{{leftItems}}" isWant="{{true}}"></card>
-    </view>
-  </block>
-</view>
-<view class="{{'filter-page '+(filterIsOpen?'is-open':'')}}">
-  <view bind:tap="toggleFilter" class="filter-hider"></view>
-  <view class="tabs-container d-flex">
-    <view class="choice-container">
-      <block wx:for="{{choices}}" wx:for-item="choice">
-        <text class="cat-title">{{choice.title}}</text>
-        <view class="{{utils.getTabClass(index, ind, chosen)}}" wx:for="{{choice.tabs}}" wx:key="tab" wx:for-item="tab" wx:for-index="ind" data-cat="{{index}}" data-tab="{{ind}}" bind:tap="chooseTab">
-          {{tab}}
-        </view>
-      </block>
-    </view>
-    <view bind:tap="getFilteredItems" class="submit d-flex">完成</view>
+    <view class="{{'slider ind'+curPage}}"></view>
   </view>
-</view>
+  <view wx:if="{{leftItems.length>0}}" class="card-container">
+    <block wx:if="{{curPage!==2}}">
+      <view class="left-container">
+        <card items="{{leftItems}}"></card>
+      </view>
+      <view class="right-container">
+        <card items="{{rightItems}}"></card>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="double-container">
+        <card items="{{leftItems}}" isWant="{{true}}"></card>
+      </view>
+    </block>
+  </view>
+  <empty hint="没有符合的商品呢..." wx:else></empty>
+  <view class="{{'filter-page '+(filterIsOpen?'is-open':'')}}">
+    <view bind:tap="toggleFilter" class="filter-hider"></view>
+    <view class="tabs-container d-flex">
+      <view class="choice-container">
+        <block wx:for="{{choices}}" wx:for-item="choice">
+          <text class="cat-title">{{choice.title}}</text>
+          <view class="{{utils.getTabClass(index, ind, chosen)}}" wx:for="{{choice.tabs}}" wx:key="tab" wx:for-item="tab" wx:for-index="ind" data-cat="{{index}}" data-tab="{{ind}}" bind:tap="chooseTab">
+            {{tab}}
+          </view>
+        </block>
+      </view>
+      <view bind:tap="getFilteredItems" class="submit d-flex">完成</view>
+    </view>
+  </view>
+</block>
 <tabbar cur-page="market"></tabbar>
 <wxs module="utils">
 function getTabClass (cat, ind, chosen) {

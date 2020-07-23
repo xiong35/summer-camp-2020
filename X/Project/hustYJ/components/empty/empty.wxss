@@ -1,0 +1,17 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.container image {
+  width: 400rpx;
+  height: 400rpx;
+  margin-top: 250rpx;
+}
+
+.container .hint {
+  margin-top: 40rpx;
+  display: block;
+  color: var(--grey);
+}

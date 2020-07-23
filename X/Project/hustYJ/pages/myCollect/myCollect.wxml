@@ -1,10 +1,11 @@
-<scroll-view class="container">
+<scroll-view wx:if="{{items.length>0}}" class="container">
   <my-item wx:for="{{items}}" wx:key="_id" src_="{{utils.getSrc(item)}}" title="{{item.title}}" subtitle="{{utils.getAddr(item.address)}}" price="{{item.sell_price||item.rent_price}}" _id="{{item._id}}">
     <view class="btn d-flex" data-_id="{{item._id}}" data-ind="{{index}}" catch:tap="cancleCollect">
       取消收藏
     </view>
   </my-item>
 </scroll-view>
+<empty hint="收藏夹为空, 先去逛逛吧(≧∇≦)ﾉ" wx:else></empty>
 <wxs module="utils">
 function getDescription (now, timestamp) {
   var diff = now*1/1000 - timestamp

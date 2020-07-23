@@ -172,19 +172,12 @@ Page({
       type: 2,
       title,
       description: des,
-      pictures,
-      rent_price: price,
-      sell_price: price,
-      origin_price: price,
-      address:
-        areas[curArea].title +
-        "|" +
-        (block ? block + "栋" : "全区"),
+      except_price: price,
       category: curCat,
       contact_way: id,
     };
 
-    let res = await request("market.publish", data, "POST", true);
+    let res = await request("reward.publish", data, "POST", true);
     console.log(res);
   },
 });

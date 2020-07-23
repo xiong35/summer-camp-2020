@@ -106,6 +106,13 @@
 					"pathName": "pages/postSale/postSale",
 					"query": "id=5f082438780e5b7c6a39c52d",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/postWant/postWant",
+					"pathName": "pages/postWant/postWant",
+					"query": "id=5f082438780e5b7c6a39c52d",
+					"scene": null
 				}
 			]
 		}

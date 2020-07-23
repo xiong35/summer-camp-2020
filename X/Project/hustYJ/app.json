@@ -7,7 +7,7 @@
     "pages/good/good",
     "pages/mySale/mySale",
     "pages/myWant/myWant",
-    "pages/myLikes/myLikes",
+    "pages/myCollect/myCollect",
     "pages/notice/notice",
     "pages/feedback/feedback",
     "pages/postWant/postWant",
@@ -19,7 +19,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true
+    "enablePullDownRefresh": false
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

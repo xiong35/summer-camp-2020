@@ -19,7 +19,6 @@ Page({
       collected: res.data.data.is_collect,
       isWant: want == "true",
     });
-    console.log(this.data.item);
   },
 
   async collect() {

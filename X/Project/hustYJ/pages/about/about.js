@@ -1,47 +1,36 @@
+import { request } from "../../network/request";
 // pages/about/about.js
 Page({
-  /**
-   * 页面的初始数据
-   */
-  data: {},
+  data: {
+    avatarUrl:
+      "https://wx.qlogo.cn/mmopen/vi_32/x9U78tCoyfia9BZXzibADqibCV1uGwjZV4wKaLZPtGtf5jqKyf4XUOwPcf4smFxibicVpeG5S1oA20n3jvXoLuenXSA/132",
+    nickName: "三十五画生",
+    userInfo: {
+      num_of_collect: "---",
+      num_of_pub: "---",
+      num_of_rent: "---",
+      num_of_view: "---",
+      status: 1,
+    },
+  },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {},
+  async onLoad(options) {
+    let res = await request("user.index", {}, "GET", true);
+    console.log(res);
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {},
+    this.setData({
+      userInfo: res.data.data,
+    });
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {},
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {},
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {},
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {},
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {},
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {},
+    const app = getApp();
+    try {
+      const { avatarUrl, nickName } = app.globalData.userInfo;
+      this.setData({
+        avatarUrl,
+        nickName,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  },
 });

@@ -1,2 +1,50 @@
-<!--pages/about/about.wxml-->
-<text>pages/about/about.wxml</text>
+<view class="container">
+  <view class="main card">
+    <view class="user-container">
+      <view class="avatar-container">
+        <image class="avatar" src="{{avatarUrl}}"></image>
+        <image class="auth" src="../../static/img/auth{{userInfo.status==1?'_no':''}}.png"></image>
+      </view>
+      <view class="user-name">{{nickName}}</view>
+    </view>
+    <view class="info-container">
+      <view class="info-item">
+        <text class="num">{{userInfo.num_of_pub}}</text>
+        <text class="title">被想要</text>
+      </view>
+      <view class="info-item">
+        <text class="num">{{userInfo.num_of_collect}}</text>
+        <text class="title">被收藏</text>
+      </view>
+      <view class="info-item">
+        <text class="num">{{userInfo.num_of_view}}</text>
+        <text class="title">浏览量</text>
+      </view>
+    </view>
+  </view>
+  <view class="my card">
+    <navigator url="/pages/mySale/mySale" class="bar sale">
+      <image class="icon" src="../../static/img/my_sale.png" mode="aspectFit" />
+      我的闲置
+    </navigator>
+    <navigator url="/pages/myWant/myWant" class="bar want">
+      <image class="icon" src="../../static/img/my_want.png" mode="aspectFit" />
+      我的求购
+    </navigator>
+    <navigator url="/pages/myCollect/myCollect" class="bar collect">
+      <image class="icon" src="../../static/img/my_collect.png" mode="aspectFit" />
+      我的收藏
+    </navigator>
+  </view>
+  <view class="function card">
+    <navigator url="/pages/notice/notice" class="bar notice">
+      <image class="icon" src="../../static/img/notice.png" mode="aspectFit" />
+      交易须知
+    </navigator>
+    <navigator url="/pages/feedback/feedback" class="bar feedback">
+      <image class="icon" src="../../static/img/feedback.png" mode="aspectFit" />
+      反馈建议
+    </navigator>
+  </view>
+</view>
+<tabbar cur-page="about"></tabbar>

@@ -1,0 +1,97 @@
+$devider: 1px solid #dddd;
+
+.card {
+  width: 710rpx;
+  margin-bottom: 20rpx;
+  border-radius: 12px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 2px 2px 7px #eee;
+}
+
+.container {
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  height: 262rpx * 2;
+  flex-direction: column;
+  .user-container {
+    width: 100%;
+    height: auto;
+    padding-top: 64rpx;
+    text-align: center;
+    .avatar-container {
+      height: 144rpx;
+      width: 144rpx;
+      margin: auto;
+      position: relative;
+      margin-bottom: 40rpx;
+      .avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+      .auth {
+        width: 100rpx;
+        height: 32rpx;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+      }
+    }
+    .user-name {
+      font-size: 40rpx;
+      font-weight: bold;
+    }
+  }
+  .info-container {
+    margin-top: 64rpx;
+    display: flex;
+    height: 120rpx;
+    .info-item {
+      flex: 1;
+      text-align: center;
+      .num {
+        color: var(--theme);
+        display: block;
+        margin-top: 8rpx;
+        font-size: 40rpx;
+      }
+      .title {
+        margin-top: 20rpx;
+        font-size: 28rpx;
+        color: var(--grey);
+      }
+    }
+    .info-item:not(:last-child) {
+      border-right: $devider;
+    }
+  }
+}
+
+.my,
+.function {
+  display: flex;
+  flex-direction: column;
+  .icon {
+    width: 40rpx;
+    height: 40rpx;
+    position: relative;
+    top: 6rpx;
+    right: 14rpx;
+  }
+  .bar {
+    flex: 1;
+    padding: 20rpx 0 28rpx 32rpx;
+    margin: 0 20rpx 0 20rpx;
+    color: var(--grey);
+    font-size: 32rpx;
+  }
+  .bar:not(:last-child) {
+    border-bottom: $devider;
+  }
+}

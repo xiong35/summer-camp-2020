@@ -16,7 +16,6 @@ Page({
 
   async onLoad(options) {
     let res = await request("user.index", {}, "GET", true);
-    console.log(res);
 
     this.setData({
       userInfo: res.data.data,

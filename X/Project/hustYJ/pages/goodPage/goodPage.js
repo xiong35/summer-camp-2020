@@ -3,7 +3,13 @@ import { request } from "../../network/request";
 
 Page({
   data: {
-    item: null,
+    item: {
+      address: "暂无",
+      description: "暂无",
+      title: "暂无",
+      sell_price: "暂无",
+      create_at: new Date() * 1,
+    },
     now: new Date() - 0,
     collected: false,
     isWant: false,

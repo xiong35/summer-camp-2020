@@ -97,6 +97,14 @@
 					"id": -1,
 					"name": "collect",
 					"pathName": "pages/myCollect/myCollect",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "post sale",
+					"pathName": "pages/postSale/postSale",
+					"query": "id=5f082438780e5b7c6a39c52d",
 					"scene": null
 				}
 			]

@@ -1,0 +1,11 @@
+<navigator url="/pages/goodPage/goodPage?id={{_id}}" class="card">
+  <image class="pic" src="{{src_}}"></image>
+  <view class="info">
+    <text class="title">{{title}}</text>
+    <text class="subtitle">{{subtitle}}</text>
+    <text class="price">￥{{price}}</text>
+    <view class="btn">
+      <slot></slot>
+    </view>
+  </view>
+</navigator>

@@ -1,0 +1,54 @@
+.card {
+  width: 700rpx;
+  height: 200rpx;
+  margin: 70rpx 25rpx;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.card .info {
+  width: 500rpx;
+  float: right;
+}
+
+.card .pic {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 12rpx;
+  float: left;
+}
+
+.card .title,
+.card .subtitle,
+.card .price,
+.card .btn {
+  position: absolute;
+}
+
+.card .title {
+  left: 230rpx;
+  top: 0;
+  font-size: 32rpx;
+  color: #333;
+}
+
+.card .subtitle {
+  top: 50rpx;
+  left: 230rpx;
+  font-size: 32rpx;
+  color: var(--grey);
+}
+
+.card .price {
+  font-size: 40rpx;
+  color: var(--theme);
+  bottom: 0;
+  left: 230rpx;
+  font-weight: bold;
+}
+
+.card .btn {
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}

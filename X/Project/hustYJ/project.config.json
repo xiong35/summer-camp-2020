@@ -92,6 +92,12 @@
 					"pathName": "pages/about/about",
 					"query": "id=5f082438780e5b7c6a39c52d",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "collect",
+					"pathName": "pages/myCollect/myCollect",
+					"scene": null
 				}
 			]
 		}

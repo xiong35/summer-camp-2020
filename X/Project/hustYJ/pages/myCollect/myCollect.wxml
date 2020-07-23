@@ -1,2 +1,53 @@
-<!--pages/myCollect/myCollect.wxml-->
-<text>pages/myCollect/myCollect.wxml</text>
+<scroll-view class="container">
+  <my-item wx:for="{{items}}" wx:key="_id" src_="{{utils.getSrc(item)}}" title="{{item.title}}" subtitle="{{utils.getAddr(item.address)}}" price="{{item.sell_price||item.rent_price}}" _id="{{item._id}}">
+    <view class="btn d-flex" data-_id="{{item._id}}" data-ind="{{index}}" catch:tap="cancleCollect">
+      取消收藏
+    </view>
+  </my-item>
+</scroll-view>
+<wxs module="utils">
+function getDescription (now, timestamp) {
+  var diff = now*1/1000 - timestamp
+  var diffHour = diff / 60 / 60
+  var diffDay = diffHour / 24
+  var diffMonth = diffDay / 30
+  if (diffHour<1) {
+    return "不足1小时"
+  }
+  if (diffDay<1) {
+    return ~~diffHour+"小时"
+  }
+  if (diffMonth<1) {
+    return ~~diffDay+"天"
+  }
+  return ~~diffMonth+"月"
+}
+
+function getAddr(addr){
+  return addr.split("|").join(" ")
+}
+
+function fmt(item, isWant){
+  if(isWant){
+    return item.title
+  }
+  var text = item.title + item.description
+  if (text.length>13) {
+    return text.slice(0,13)+'...'
+  }
+  return text
+}
+
+function getSrc(item){
+  if (item.pictures&&item.pictures.length>0){
+    return item.pictures[0]
+  }
+  return "../../static/img/default.jpg"
+}
+
+
+module.exports.getDescription = getDescription;
+module.exports.getAddr = getAddr;
+module.exports.getSrc = getSrc;
+module.exports.fmt = fmt;
+</wxs>

@@ -4,12 +4,9 @@
     "pages/about/about",
     "pages/search/search",
     "pages/searchResult/searchResult",
-    "pages/good/good",
     "pages/mySale/mySale",
     "pages/myWant/myWant",
     "pages/myCollect/myCollect",
-    "pages/notice/notice",
-    "pages/feedback/feedback",
     "pages/postSale/postSale",
     "pages/goodPage/goodPage"
   ],

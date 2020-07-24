@@ -49,6 +49,6 @@
 
 .card .btn {
   right: 0;
-  bottom: 0;
+  bottom: -8rpx;
   z-index: 9;
 }

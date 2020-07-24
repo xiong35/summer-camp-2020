@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "empty": "../../components/empty/empty",
+    "my-item": "../../components/my-item/my-item"
+  },
+  "navigationBarTitleText": "我的闲置"
 }

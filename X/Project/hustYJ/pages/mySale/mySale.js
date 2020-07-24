@@ -1,66 +1,61 @@
-// pages/mySale/mySale.js
-Page({
+import { request } from "../../network/request";
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-
+    type: "market",
+    items: [],
+    now: new Date().getTime(),
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  async onLoad(options) {
+    const { type } = options;
 
+    wx.setNavigationBarTitle({
+      title: typr == "market" ? "闲置" : "求购",
+    });
+
+    const res = await request(`user.${type}.pub`, {}, "GET", true);
+    this.setData({
+      items: res.data.data,
+      type,
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  async canclePost(e) {
+    let { type } = this.data;
+    let { _id, ind } = e.target.dataset;
 
+    const res = await request(
+      "user.item.delete",
+      { _id, type: type == "market" ? 1 : 2 },
+      "POST",
+      true
+    );
+
+    if (!res.data || !res.data.success) {
+      return;
+    }
+
+    let { items } = this.data;
+    items.splice(ind, 1);
+    this.setData({
+      items,
+    });
+
+    wx.showToast({
+      title: "删除成功",
+    });
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  async editPost(e) {
+    wx.showToast({
+      title: "暂时不支持编辑QwQ, 请删除后重新发布吧",
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
-})
+});

@@ -194,6 +194,17 @@ Page({
       "POST",
       true
     );
+
+    wx.showToast({
+      title: "发布成功!",
+      duration: 1000,
+      mask: true,
+      complete: () => {
+        wx.redirectTo({
+          url: "/pages/market/market",
+        });
+      },
+    });
   },
 
   onLoad(options) {

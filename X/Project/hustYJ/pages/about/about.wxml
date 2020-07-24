@@ -23,11 +23,11 @@
     </view>
   </view>
   <view class="my card">
-    <navigator url="/pages/mySale/mySale" class="bar sale">
+    <navigator url="/pages/mySale/mySale?type=market" class="bar sale">
       <image class="icon" src="../../static/img/my_sale.png" mode="aspectFit" />
       我的闲置
     </navigator>
-    <navigator url="/pages/myWant/myWant" class="bar want">
+    <navigator url="/pages/mySale/mySale?type=reward" class="bar want">
       <image class="icon" src="../../static/img/my_want.png" mode="aspectFit" />
       我的求购
     </navigator>
@@ -37,14 +37,14 @@
     </navigator>
   </view>
   <view class="function card">
-    <navigator url="/pages/notice/notice" class="bar notice">
+    <view bind:tap="notYet" class="bar notice">
       <image class="icon" src="../../static/img/notice.png" mode="aspectFit" />
       交易须知
-    </navigator>
-    <navigator url="/pages/feedback/feedback" class="bar feedback">
+    </view>
+    <view bind:tap="notYet" class="bar feedback">
       <image class="icon" src="../../static/img/feedback.png" mode="aspectFit" />
       反馈建议
-    </navigator>
+    </view>
   </view>
 </view>
 <tabbar cur-page="about"></tabbar>

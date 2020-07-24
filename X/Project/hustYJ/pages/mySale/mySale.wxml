@@ -1,2 +1,55 @@
-<!--pages/mySale/mySale.wxml-->
-<text>pages/mySale/mySale.wxml</text>
+<scroll-view wx:if="{{items.length>0}}" class="container">
+  <my-item wx:for="{{items}}" wx:key="_id" src_="{{utils.getSrc(item)}}" title="{{utils.fmt(item)}}" subtitle="{{utils.getSubtitle(item, type, now)}}" price="{{item.sell_price||item.rent_price||item.except_price||'暂无'}}" _id="{{item._id}}">
+    <view class="btn-container">
+      <view class="btn edit d-flex" data-_id="{{item._id}}" data-ind="{{index}}" catch:tap="editPost">
+        编辑
+      </view>
+      <view class="btn del d-flex" data-_id="{{item._id}}" data-ind="{{index}}" catch:tap="canclePost">
+        删除
+      </view>
+    </view>
+  </my-item>
+</scroll-view>
+<empty hint="{{type=='market'?'发布为空, 找点东西来卖吧(≧∇≦)ﾉ':'悬赏为空, 想想需要什么吧(≧∇≦)ﾉ'}}" wx:else></empty>
+<wxs module="utils">
+
+function fmt(item){
+  var text = item.title + " " + item.description
+  if (text.length>13) {
+    return text.slice(0,13)+'...'
+  }
+  return text
+}
+
+function getSubtitle(item, type, now) {
+  if(type=="market"){
+    return "浏览"+(item.num_of_view+1)+" · 想要"+(item.num_of_want)
+  }
+  var diff = now*1/1000 - item.create_at
+  var diffHour = diff / 60 / 60
+  var diffDay = diffHour / 24
+  var diffMonth = diffDay / 30
+  if (diffHour<1) {
+    return "不足1小时前发布"
+  }
+  if (diffDay<1) {
+    return ~~diffHour+"小时前发布"
+  }
+  if (diffMonth<1) {
+    return ~~diffDay+"天前发布"
+  }
+  return ~~diffMonth+"月前发布"
+}
+
+function getSrc(item){
+  if (item.pictures&&item.pictures.length>0){
+    return item.pictures[0]
+  }
+  return "../../static/img/default.jpg"
+}
+
+
+module.exports.getSubtitle = getSubtitle;
+module.exports.getSrc = getSrc;
+module.exports.fmt = fmt;
+</wxs>

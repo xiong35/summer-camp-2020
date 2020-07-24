@@ -40,4 +40,11 @@ Page({
       console.log(err);
     }
   },
+
+  notYet() {
+    wx.showToast({
+      title: "暂时不支持此操作QwQ",
+      icon: "none",
+    });
+  },
 });

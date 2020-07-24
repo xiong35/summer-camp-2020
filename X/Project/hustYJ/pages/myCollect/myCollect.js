@@ -42,5 +42,9 @@ Page({
     this.setData({
       items,
     });
+
+    wx.showToast({
+      title: "取消成功",
+    });
   },
 });

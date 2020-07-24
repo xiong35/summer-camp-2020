@@ -1,0 +1,150 @@
+Date : 2020-07-24 15:31:04
+Directory : c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ
+Total : 100 files,  3835 codes, 107 comments, 434 blanks, all 4376 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         19 |      1,228 |        100 |        184 |      1,512 |
+| SCSS       |         14 |        862 |          0 |         43 |        905 |
+| CSS        |         15 |        856 |          0 |        155 |      1,011 |
+| wxml       |         14 |        535 |          3 |         24 |        562 |
+| XML        |         38 |        354 |          4 |         28 |        386 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                           | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                              |        100 |      3,835 |        107 |        434 |      4,376 |
+| components                                                                                                     |         16 |        674 |         12 |         66 |        752 |
+| components\card                                                                                                |          4 |        158 |          1 |         14 |        173 |
+| components\custom-tab-bar                                                                                      |          4 |        336 |          1 |         35 |        372 |
+| components\empty                                                                                               |          4 |         44 |         10 |          7 |         61 |
+| components\my-item                                                                                             |          4 |        136 |          0 |         10 |        146 |
+| network                                                                                                        |          3 |        226 |          7 |         20 |        253 |
+| pages                                                                                                          |         40 |      2,520 |         82 |        310 |      2,912 |
+| pages\about                                                                                                    |          4 |        279 |          5 |         27 |        311 |
+| pages\editInfo                                                                                                 |          4 |        195 |          5 |         30 |        230 |
+| pages\goodPage                                                                                                 |          4 |        292 |          3 |         30 |        325 |
+| pages\market                                                                                                   |          4 |        566 |         14 |         57 |        637 |
+| pages\myCollect                                                                                                |          4 |        100 |          6 |         15 |        121 |
+| pages\mySale                                                                                                   |          4 |        127 |          6 |         20 |        153 |
+| pages\postAuth                                                                                                 |          4 |        287 |          4 |         40 |        331 |
+| pages\postSale                                                                                                 |          4 |        410 |          4 |         54 |        468 |
+| pages\search                                                                                                   |          4 |        174 |         10 |         17 |        201 |
+| pages\searchResult                                                                                             |          4 |         90 |         25 |         20 |        135 |
+| static                                                                                                         |         38 |        354 |          4 |         28 |        386 |
+| static\images                                                                                                  |         37 |        345 |          4 |         27 |        376 |
+| static\images\icons                                                                                            |         37 |        345 |          4 |         27 |        376 |
+| static\img                                                                                                     |          1 |          9 |          0 |          1 |         10 |
+| utils                                                                                                          |          1 |         16 |          0 |          4 |         20 |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                       | language   | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\app.js                                   | JavaScript |         32 |          2 |          4 |         38 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\app.wxss                                 | CSS        |         13 |          0 |          2 |         15 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\card\card.js                  | JavaScript |         15 |          1 |          1 |         17 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\card\card.scss                | SCSS       |         42 |          0 |          1 |         43 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\card\card.wxml                | wxml       |         59 |          0 |          4 |         63 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\card\card.wxss                | CSS        |         42 |          0 |          8 |         50 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\custom-tab-bar\index.js       | JavaScript |         18 |          1 |          1 |         20 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\custom-tab-bar\index.scss     | SCSS       |        136 |          0 |          8 |        144 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\custom-tab-bar\index.wxml     | wxml       |         47 |          0 |          2 |         49 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\custom-tab-bar\index.wxss     | CSS        |        135 |          0 |         24 |        159 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\empty\empty.js                | JavaScript |         10 |         10 |          3 |         23 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\empty\empty.scss              | SCSS       |         15 |          0 |          1 |         16 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\empty\empty.wxml              | wxml       |          4 |          0 |          0 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\empty\empty.wxss              | CSS        |         15 |          0 |          3 |         18 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\my-item\my-item.js            | JavaScript |         31 |          0 |          1 |         32 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\my-item\my-item.scss          | SCSS       |         47 |          0 |          1 |         48 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\my-item\my-item.wxml          | wxml       |         11 |          0 |          0 |         11 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\components\my-item\my-item.wxss          | CSS        |         47 |          0 |          8 |         55 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\network\getJWT.js                        | JavaScript |         37 |          0 |          5 |         42 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\network\request.js                       | JavaScript |         34 |          0 |          4 |         38 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\network\uploadImg.js                     | JavaScript |        155 |          7 |         11 |        173 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\about\about.js                     | JavaScript |         41 |          5 |          5 |         51 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\about\about.scss                   | SCSS       |         93 |          0 |          5 |         98 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\about\about.wxml                   | wxml       |         50 |          0 |          0 |         50 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\about\about.wxss                   | CSS        |         95 |          0 |         17 |        112 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\editInfo\editInfo.js               | JavaScript |         76 |          5 |         17 |         98 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\editInfo\editInfo.scss             | SCSS       |         43 |          0 |          3 |         46 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\editInfo\editInfo.wxml             | wxml       |         37 |          0 |          2 |         39 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\editInfo\editInfo.wxss             | CSS        |         39 |          0 |          8 |         47 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\goodPage\goodPage.js               | JavaScript |         49 |          1 |          7 |         57 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\goodPage\goodPage.scss             | SCSS       |         97 |          0 |          4 |        101 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\goodPage\goodPage.wxml             | wxml       |         52 |          2 |          3 |         57 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\goodPage\goodPage.wxss             | CSS        |         94 |          0 |         16 |        110 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\market\market.js                   | JavaScript |        175 |         13 |         21 |        209 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\market\market.scss                 | SCSS       |        167 |          0 |          6 |        173 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\market\market.wxml                 | wxml       |         61 |          1 |          1 |         63 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\market\market.wxss                 | CSS        |        163 |          0 |         29 |        192 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\myCollect\myCollect.js             | JavaScript |         37 |          6 |          8 |         51 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\myCollect\myCollect.scss           | SCSS       |          7 |          0 |          1 |          8 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\myCollect\myCollect.wxml           | wxml       |         49 |          0 |          5 |         54 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\myCollect\myCollect.wxss           | CSS        |          7 |          0 |          1 |          8 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\mySale\mySale.js                   | JavaScript |         45 |          6 |         11 |         62 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\mySale\mySale.scss                 | SCSS       |         16 |          0 |          1 |         17 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\mySale\mySale.wxml                 | wxml       |         50 |          0 |          5 |         55 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\mySale\mySale.wxss                 | CSS        |         16 |          0 |          3 |         19 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\postAuth\postAuth.js               | JavaScript |        115 |          4 |         21 |        140 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\postAuth\postAuth.scss             | SCSS       |         75 |          0 |          5 |         80 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\postAuth\postAuth.wxml             | wxml       |         26 |          0 |          0 |         26 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\postAuth\postAuth.wxss             | CSS        |         71 |          0 |         14 |         85 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\postSale\postSale.js               | JavaScript |        252 |          4 |         38 |        294 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\postSale\postSale.scss             | SCSS       |         53 |          0 |          4 |         57 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\postSale\postSale.wxml             | wxml       |         56 |          0 |          2 |         58 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\postSale\postSale.wxss             | CSS        |         49 |          0 |         10 |         59 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\searchResult\searchResult.js       | JavaScript |         47 |         25 |         15 |         87 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\searchResult\searchResult.scss     | SCSS       |         17 |          0 |          1 |         18 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\searchResult\searchResult.wxml     | wxml       |          9 |          0 |          0 |          9 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\searchResult\searchResult.wxss     | CSS        |         17 |          0 |          4 |         21 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\search\search.js                   | JavaScript |         43 |         10 |          7 |         60 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\search\search.scss                 | SCSS       |         54 |          0 |          2 |         56 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\search\search.wxml                 | wxml       |         24 |          0 |          0 |         24 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\pages\search\search.wxss                 | CSS        |         53 |          0 |          8 |         61 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\addpic.svg           | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\circle.svg           | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\circle_untouched.svg | XML        |          3 |          0 |          1 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\collect_no.svg       | XML        |          3 |          0 |          1 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\comment.svg          | XML        |         16 |          0 |          0 |         16 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\cover.svg            | XML        |         17 |          1 |          0 |         18 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\delete.svg           | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\enter.svg            | XML        |          3 |          0 |          1 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\favor.svg            | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\feedback.svg         | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\fliter.svg           | XML        |         16 |          0 |          1 |         17 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\heart.svg            | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\heart_no.svg         | XML        |          3 |          0 |          1 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\in.svg               | XML        |         21 |          0 |          1 |         22 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\lock.svg             | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\me.svg               | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\me_untouched.svg     | XML        |          3 |          0 |          1 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\medal1.svg           | XML        |          8 |          0 |          1 |          9 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\medal2.svg           | XML        |          8 |          0 |          1 |          9 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\medal3.svg           | XML        |          8 |          0 |          1 |          9 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\notice.svg           | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\out.svg              | XML        |         21 |          0 |          1 |         22 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\post_borrow.svg      | XML        |         25 |          1 |          0 |         26 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\post_rent.svg        | XML        |         30 |          1 |          0 |         31 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\post_sale.svg        | XML        |         20 |          1 |          0 |         21 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\release.svg          | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\rent.svg             | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\rent_untouched.svg   | XML        |          3 |          0 |          1 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\search.svg           | XML        |          3 |          0 |          1 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\share.svg            | XML        |         16 |          0 |          0 |         16 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\star.svg             | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\things.svg           | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\things_untouched.svg | XML        |          3 |          0 |          1 |          4 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\us.svg               | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\ye.svg               | XML        |          1 |          0 |          0 |          1 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\yes.svg              | XML        |          6 |          0 |          1 |          7 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\images\icons\yes_no.svg           | XML        |          6 |          0 |          1 |          7 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\static\img\filter.svg                    | XML        |          9 |          0 |          1 |         10 |
+| c:\Users\xiong35\Desktop\workingspace\bingyan_summer\X\Project\hustYJ\utils\util.js                            | JavaScript |         16 |          0 |          4 |         20 |
+| Total                                                                                                          |            |      3,835 |        107 |        434 |      4,376 |
++----------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

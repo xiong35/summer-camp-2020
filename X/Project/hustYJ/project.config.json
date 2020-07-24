@@ -120,6 +120,13 @@
 					"pathName": "pages/postAuth/postAuth",
 					"query": "id=5f082438780e5b7c6a39c52d",
 					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "editInfo",
+					"pathName": "pages/editInfo/editInfo",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

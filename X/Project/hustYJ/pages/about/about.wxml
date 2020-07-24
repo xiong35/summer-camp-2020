@@ -1,12 +1,12 @@
 <view class="container">
   <view class="main card">
-    <view class="user-container">
+    <navigator url="/pages/editInfo/editInfo" class="user-container">
       <view class="avatar-container">
         <image class="avatar" src="{{avatarUrl}}"></image>
         <image class="auth" src="../../static/img/auth{{userInfo.status==1?'_no':''}}.png"></image>
       </view>
       <view class="user-name">{{nickName}}</view>
-    </view>
+    </navigator>
     <view class="info-container">
       <view class="info-item">
         <text class="num">{{userInfo.num_of_pub}}</text>

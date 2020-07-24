@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="devider"></view>
+  <view class="box">
+    <text class="name">选择地址</text>
+    <picker mode="selector" range="{{utils.getAreas(areas)}}" value="{{area}}" bind:change="chooseArea">
+      <text decode class="picked">{{areas[area].title}}>&nbsp;</text>
+    </picker>
+    <picker mode="selector" range="{{utils.getArray(areas[area].maxBlock)}}" value="{{block}}" bind:change="chooseBlock">
+      <text decode class="picked">{{utils.getArray(areas[area].maxBlock)[block]}}></text>
+    </picker>
+  </view>
+  <view class="box">
+    <text class="name">微信ID</text>
+    <input type="text" placeholder="请输入微信ID" value="{{id}}" placeholder-style="{color:#999;}" style="width:200rpx" bindinput="wxidInput"></input>
+  </view>
+  <view class="devider"></view>
+  <view class="submit {{id?'active':''}} d-flex" bind:tap="submit">确认发布</view>
+</view>
+<wxs module="utils">
+function getArray(number) {
+  if (number == 0){
+    return ["全区"]
+  }
+  var array = []
+  for (var i = 0; i < number; i++){
+    array.push((i+1)+"栋")
+  }
+  return array
+}
+
+function getAreas(areas) {
+  return areas.map(function(area){
+    return area.title
+  })
+}
+
+module.exports.getArray = getArray
+module.exports.getAreas = getAreas
+</wxs>

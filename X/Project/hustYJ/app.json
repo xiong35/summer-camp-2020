@@ -9,6 +9,7 @@
     "pages/myCollect/myCollect",
     "pages/postSale/postSale",
     "pages/postAuth/postAuth",
+    "pages/editInfo/editInfo",
     "pages/goodPage/goodPage"
   ],
   "window": {

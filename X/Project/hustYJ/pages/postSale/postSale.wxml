@@ -21,8 +21,8 @@
   </view>
   <view class="devider"></view>
   <view class="box">
-    <text class="name">选择类别</text>
-    <picker mode="selector" range="{{utils.getAreas(areas)}}" value="{{curCat}}" bind:change="chooseArea">
+    <text class="name">选择地址</text>
+    <picker mode="selector" range="{{utils.getAreas(areas)}}" value="{{curArea}}" bind:change="chooseArea">
       <text decode class="picked">{{areas[curArea].title}}>&nbsp;</text>
     </picker>
     <picker mode="selector" range="{{utils.getArray(areas[curArea].maxBlock)}}" value="{{block}}" bind:change="chooseBlock">

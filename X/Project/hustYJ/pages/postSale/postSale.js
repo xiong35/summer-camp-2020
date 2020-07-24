@@ -43,6 +43,7 @@ Page({
     id: "",
     canSubmit: false,
     pictures: [],
+    _id: "",
   },
 
   checkSubmit() {
@@ -163,6 +164,7 @@ Page({
       canSubmit,
       pictures,
       postType,
+      _id,
     } = this.data;
 
     if (!canSubmit) {
@@ -195,6 +197,10 @@ Page({
       true
     );
 
+    if (_id) {
+      this.canclePost(_id, postType);
+    }
+
     wx.showToast({
       title: "发布成功!",
       duration: 1000,
@@ -208,12 +214,80 @@ Page({
   },
 
   onLoad(options) {
-    let { type } = options;
+    let { type, id } = options;
     this.setData({
       postType: type,
     });
     wx.setNavigationBarTitle({
       title: type === "market" ? "发布闲置" : "发布求购",
     });
+
+    if (id) {
+      this.preLoad(id, type);
+      wx.setNavigationBarTitle({
+        title: type === "market" ? "编辑闲置" : "编辑求购",
+      });
+    }
+  },
+
+  async preLoad(id, type) {
+    let res = await request(
+      `${type}.get`,
+      { _id: id },
+      "POST",
+      true
+    );
+
+    let {
+      title,
+      description,
+      contact_way,
+      pictures,
+      category,
+      sell_price,
+      address,
+    } = res.data.data;
+
+    let { area, block } = this.addr2Digit(address);
+
+    this.setData({
+      title,
+      des: description,
+      id: contact_way,
+      pictures,
+      curCat: category,
+      price: sell_price,
+      curArea: area,
+      block,
+      _id: id,
+      canSubmit: true,
+    });
+  },
+
+  async canclePost(id, type) {
+    const res = await request(
+      "user.item.delete",
+      { _id: id, type: type == "market" ? 1 : 2 },
+      "POST",
+      true
+    );
+  },
+
+  addr2Digit(address) {
+    let info = {
+      area: 0,
+      block: 0,
+    };
+
+    if (!address) {
+      return info;
+    }
+
+    let addrs = address.split("|");
+
+    info.block = parseInt(addrs[1]) || 0;
+    info.area = areas.findIndex((obj) => obj.title === addrs[0]);
+
+    return info;
   },
 });

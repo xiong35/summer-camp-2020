@@ -17,7 +17,7 @@ Page({
     const { type } = options;
 
     wx.setNavigationBarTitle({
-      title: typr == "market" ? "闲置" : "求购",
+      title: type == "market" ? "闲置" : "求购",
     });
 
     const res = await request(`user.${type}.pub`, {}, "GET", true);
@@ -53,9 +53,9 @@ Page({
     });
   },
 
-  async editPost(e) {
-    wx.showToast({
-      title: "暂时不支持编辑QwQ, 请删除后重新发布吧",
+  editPost(e) {
+    wx.redirectTo({
+      url: `/pages/postSale/postSale?id=${e.target.dataset._id}&type=${this.data.type}`,
     });
   },
 });

@@ -166,3 +166,9 @@
 主要任务: 写一个 vue 的小项目, 代码在[这里](https://github.com/xiong35/WeTeam-frontend)
 
 - 09:30-22:30 继续写一个我的小项目...
+
+## 8-1
+
+主要任务: 写一个 vue 的小项目, 代码在[这里](https://github.com/xiong35/WeTeam-frontend), beta版本已经上线了, 在[这里](http://www.xiong35.cn/WeTeam/home)
+
+- 09:15-22:30 继续继续写一个我的小项目...

@@ -172,3 +172,9 @@
 主要任务: 写一个 vue 的小项目, 代码在[这里](https://github.com/xiong35/WeTeam-frontend), beta版本已经上线了, 在[这里](http://www.xiong35.cn/WeTeam/home)
 
 - 09:15-22:30 继续继续写一个我的小项目...
+
+## 8-2
+
+主要任务: 写一个 vue 的小项目, 代码在[这里](https://github.com/xiong35/WeTeam-frontend)
+
+- 09:30-22:45 继续继续写一个我的小项目..., 中间穿插复习 js 的 class, 原型链和 http 等. 哦还有做物理实验

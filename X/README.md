@@ -184,3 +184,9 @@
 主要任务: 写一个 vue 的小项目, 代码在[这里](https://github.com/xiong35/WeTeam-frontend)
 
 - 09:30-22:30 继续继续写一个我的小项目..., 中间穿插参加一个面试并复盘面经🙄
+
+## 8-4
+
+主要任务: 写一个 vue 的小项目, 代码在[这里](https://github.com/xiong35/WeTeam-frontend), 学 css
+
+- 09:30-22:30 上午写面经, 下午学http/css + 参加面试, 晚上写项目...

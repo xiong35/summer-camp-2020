@@ -191,8 +191,22 @@
 
 - 09:30-22:30 上午写面经, 下午学http/css + 参加面试, 晚上写项目...
 
-## 8-4
+## 8-5
 
 主要任务: 写一个 vue 的小项目, 代码在[这里](https://github.com/xiong35/WeTeam-frontend)
 
 - 09:30-22:30 终于写完了项目了🤣明天接着写面经
+
+## 8-6
+
+主要任务: 写总结
+
+- 09:30-22:30 写面经, 学 css, 学 http
+
+笔记地址:
+
+1. [css 水平垂直居中的 8 种方式](http://www.xiong35.cn/blog2.0/articles/blog/104)
+2. [前端安全 CSRF+XSS](http://www.xiong35.cn/blog2.0/articles/blog/105)
+3. [cookie 超级详解](http://www.xiong35.cn/blog2.0/articles/blog/106)
+4. [\[字节面试题\] 实现一个异步任务调度器](http://www.xiong35.cn/blog2.0/articles/blog/107)
+5. [字节实习一二三面面经+总结](http://www.xiong35.cn/blog2.0/articles/blog/108)
